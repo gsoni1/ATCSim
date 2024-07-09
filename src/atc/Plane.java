@@ -1,5 +1,9 @@
 package atc;
 
+/**
+ * Plane class, contains all the variables related to a specific plane. Provides getter and setter methods to modify
+ * plane variables.
+ */
 public class Plane {
     private String planeModel; // B747
     private int planeAltitude; // 39025 Ft
@@ -21,6 +25,11 @@ public class Plane {
     private String planeStatus; // at gate/taxxing/taking off/mid air/landing/arrived at gate
     private String planeFlightStatus; // delayed,on time,
 
+    /**
+     * Create a new Plane object.
+     * @param callSign assigned (Eg. AI101)
+     * @param planeStatus assigned (Eg. Mid air)
+     */
     public Plane(String callSign, String planeStatus) {
         planeCallSign = callSign;
     }

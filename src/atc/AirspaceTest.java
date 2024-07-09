@@ -38,12 +38,32 @@ public class AirspaceTest {
     }
 
     /**
-     * Tests the getPlaneInAirspace method using a plane that wasn't added to the airspace
-     * (this covers the case of a plane being parked/off/in maintainance/not in this airport's airspace)
+     * Tests the removeFromAirspace method using a plane that exists in the airspace, first by adding then removing the
+     * plane
+     */
+    @Test
+    public void testRemoveFromAirspace2() {
+        londonHeathrow.removeFromAirspace(AI101);
+        assertNotEquals(AI101, londonHeathrow.getPlaneInAirspace(AI101));
+    }
+
+    /**
+     * Tests the getPlaneInAirspace method using a plane that doesn't exist in the airspace
+     * (this covers the case of a plane being off/not in this airport's airspace)
      */
     @Test
     public void testGetPlaneInAirspace() {
         assertNotEquals(AI101, londonHeathrow.getPlaneInAirspace(AI101));
+    }
+
+    /**
+     * Tests the getPlaneInAirspace method using a plane that exists in the airspace
+     * (this covers the case of a plane being on the ground/in the air)
+     */
+    @Test
+    public void testGetPlaneInAirspace2() {
+        londonHeathrow.addToAirspace(AI101);
+        assertEquals(AI101, londonHeathrow.getPlaneInAirspace(AI101));
     }
 
 }
