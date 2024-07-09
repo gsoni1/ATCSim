@@ -41,4 +41,6 @@ public class Plane {
     public String getPlaneCallSign() {
         return planeCallSign;
     }
+
+    public String getPlaneModel() {return planeModel; }
 }
