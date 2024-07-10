@@ -1,11 +1,11 @@
 package atc;
 
 /**
- * Plane class, contains all the variables related to a specific plane. Provides getter and setter methods to modify
- * plane variables.
+ * Plane class, contains all the variables related to a specific plane. Provides getter and setter methods to modify and
+ * access plane variables.
  */
 public class Plane {
-    private String planeModel; // B747
+    private String planeModel;
     private int planeAltitude; // 39025 Ft
     private int planeSpeed; // 498 Kts
     private Double planeCoordinatesX; // 40.807756
@@ -42,5 +42,7 @@ public class Plane {
         return planeCallSign;
     }
 
-    public String getPlaneModel() {return planeModel; }
+    public String getPlaneModel() {
+        return planeModel;
+    }
 }
