@@ -4,6 +4,7 @@ import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
+ * Test class for the Airspace class
  * @author Gautam Soni
  * @version 7/10/2024
  */
