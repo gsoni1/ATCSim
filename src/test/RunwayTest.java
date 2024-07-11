@@ -1,9 +1,11 @@
-package atc;
+package test;
+import main.Plane;
+import main.Runway;
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * @author Gautam Soni and Arihita Dirghangi
+ * @author Gautam Soni
  * @version 7/10/24
  */
 public class RunwayTest {
@@ -11,15 +13,16 @@ public class RunwayTest {
     private static Runway L27;
     private static Plane AI101;
 
+    @BeforeAll
     public static void setUp() {
-        L27 = new Runway();
+        L27 = new Runway("twenty seven left");
         AI101 = new Plane("AI101", "Mid air");
     }
 
     @Test
     public void testAddToTakeoffQueue() {
         L27.addToTakeoffQueue(AI101);
-        assertEquals(AI101, L27.getTakeoffQueue());
+        assertEquals(L27.getTakeoffQueue(), AI101);
 
     }
 }

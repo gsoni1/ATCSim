@@ -1,4 +1,4 @@
-package atc;
+package main;
 import java.util.*;
 
 /**
@@ -9,17 +9,19 @@ import java.util.*;
  */
 public class Runway {
     // fields
-    // private String runwayName; // 4L
+    private String runwayName;
     private boolean runwayIsClear; // clear if true /occupied if false
-    private Queue<Plane> takeoffQueue = new LinkedList<Plane>();
-    private Queue<Plane> landingQueue = new LinkedList<Plane>();
+    private Queue<Plane> takeoffQueue;
+    private Queue<Plane> landingQueue;
 
     /**
      * Creates a new runway object
      */
-    public Runway() {
-//        this.runwayName = runwayName;
+    public Runway(String runwayName) {
         runwayIsClear = true;
+        this.runwayName = runwayName;
+        takeoffQueue = new LinkedList<Plane>();
+        landingQueue = new LinkedList<Plane>();
 
     }
 

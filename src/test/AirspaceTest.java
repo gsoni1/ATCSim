@@ -1,4 +1,6 @@
-package atc;
+package test;
+import main.Airspace;
+import main.Plane;
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 

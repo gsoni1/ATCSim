@@ -1,4 +1,4 @@
-package atc;
+package main;
 import java.util.HashMap;
 
 /**

@@ -1,4 +1,4 @@
-package atc;
+package main;
 
 /**
  * @author Arihita Dirghangi

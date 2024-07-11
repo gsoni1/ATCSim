@@ -1,4 +1,4 @@
-package atc;
+package main;
 
 /**
  * The flightschedule class is a class that is essentially a flight information display, with no methods.

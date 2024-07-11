@@ -1,4 +1,4 @@
-package atc;
+package main;
 
 /**
  * Plane class, contains all the variables related to a specific plane. Provides getter and setter methods to modify and
