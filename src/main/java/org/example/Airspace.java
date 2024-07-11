@@ -10,13 +10,13 @@ import java.util.HashMap;
  */
 public class Airspace {
     // Fields
-    private HashMap<String, Plane> airspace =  new HashMap<String, Plane>();
+    private HashMap<String, Plane> airspace;
 
     /**
      * Create a new Airspace Object.
      */
     public Airspace() {
-        //
+        airspace =  new HashMap<String, Plane>();
     }
 
     /**
@@ -25,7 +25,6 @@ public class Airspace {
      */
     public void addToAirspace(Plane p) {
         airspace.put(p.getPlaneCallSign(), p);
-//        return "Added " + p.getPlaneCallSign() + " to airspace";
     }
 
     /**
@@ -33,8 +32,9 @@ public class Airspace {
      * @param p Plane to be removed
      */
     public void removeFromAirspace(Plane p) {
-        airspace.remove(p.getPlaneCallSign());
-//        return "Removed " + p.getPlaneCallSign() + " from airspace";
+        if (p.getPlaneCallSign() != null) {
+            airspace.remove(p.getPlaneCallSign());
+        }
     }
 
     /**
@@ -44,5 +44,13 @@ public class Airspace {
      */
     public Plane getPlaneInAirspace(Plane p) {
         return airspace.get(p.getPlaneCallSign());
+    }
+
+    public void clearAirspace() {
+        airspace.clear();
+    }
+
+    public int getAirspaceCapacity() {
+        return airspace.size();
     }
 }

@@ -22,7 +22,8 @@ public class AirspaceTest {
         AI101 = new Plane("AI101", "Mid air");
     }
     /**
-     * Tests the addToAirspace method using a plane that exists within the airspace
+     * Tests the addToAirspace method using a plane that exists within the airspace.
+     * This covers the case of a plane entering the airspace.
      */
     @Test
     public void testAddToAirspace() {
@@ -32,7 +33,8 @@ public class AirspaceTest {
 
     /**
      * Tests the removeFromAirspace method using a plane that exists in the airspace, first by adding then removing the
-     * plane
+     * plane.
+     * This covers the case of a plane leaving the airspace.
      */
     @Test
     public void testRemoveFromAirspace() {
@@ -43,8 +45,9 @@ public class AirspaceTest {
     }
 
     /**
-     * Tests the removeFromAirspace method using a plane that exists in the airspace, first by adding then removing the
+     * Tests the removeFromAirspace method using a plane that does not exist in the airspace, first by adding then removing the
      * plane
+     * This covers the case of a plane on the ground or not in the airspace.
      */
     @Test
     public void testRemoveFromAirspace2() {
@@ -53,17 +56,17 @@ public class AirspaceTest {
     }
 
     /**
-     * Tests the getPlaneInAirspace method using a plane that doesn't exist in the airspace
-     * (this covers the case of a plane being off/not in this airport's airspace)
+     * Tests the getPlaneInAirspace method using a plane that doesn't exist in the airspace.
+     * This covers the case of a plane being on the ground or not in the airspace.
      */
     @Test
     public void testGetPlaneInAirspace() {
-        assertNotEquals(AI101, londonHeathrow.getPlaneInAirspace(AI101));
+        assertEquals(null, londonHeathrow.getPlaneInAirspace(AI101));
     }
 
     /**
      * Tests the getPlaneInAirspace method using a plane that exists in the airspace
-     * (this covers the case of a plane being on the ground/in the air)
+     * This covers the case of a plane being in the airspace.
      */
     @Test
     public void testGetPlaneInAirspace2() {

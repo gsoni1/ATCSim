@@ -9,6 +9,7 @@ import java.util.*;
  */
 public class Runway {
     // fields
+    private Airspace airspace;
     private String runwayName;
     private boolean runwayIsClear; // clear if true /occupied if false
     private Queue<Plane> takeoffQueue;
@@ -17,7 +18,9 @@ public class Runway {
     /**
      * Creates a new runway object
      */
-    public Runway(String runwayName) {
+    public Runway(String runwayName, Airspace airspace) {
+//        airspace = new Airspace();
+        this.airspace = airspace;
         runwayIsClear = true;
         this.runwayName = runwayName;
         takeoffQueue = new LinkedList<Plane>();
@@ -57,12 +60,13 @@ public class Runway {
     public void clearForTakeoff(Plane p) {
         runwayIsClear = false; // mark runway as occupied
         takeoffQueue.remove();
-
+        airspace.addToAirspace(p);
     }
 
     public void clearForLanding(Plane p) {
         runwayIsClear = false;
         landingQueue.remove();
+        airspace.removeFromAirspace(p);
     }
 
     public boolean checkRunwayClearance() {
