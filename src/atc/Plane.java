@@ -3,6 +3,9 @@ package atc;
 /**
  * Plane class, contains all the variables related to a specific plane. Provides getter and setter methods to modify and
  * access plane variables.
+ *
+ * @author Arihita Dirghangi
+ * @version 7/10/2024
  */
 public class Plane {
     private String planeModel;

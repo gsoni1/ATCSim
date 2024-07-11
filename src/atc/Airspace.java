@@ -4,6 +4,9 @@ import java.util.HashMap;
 /**
  * Airspace class, implements a hashmap to store planes in a given airspace. Provides methods to modify the contents
  * of the hashmap.
+ *
+ * @author Gautam Soni
+ * @version 7/10/2024
  */
 public class Airspace {
     // Fields

@@ -2,7 +2,10 @@ package atc;
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
-
+/**
+ * @author Gautam Soni and Arihita Dirghangi
+ * @version 7/10/2024
+ */
 public class AirspaceTest {
     // fields
     private static Airspace londonHeathrow;
