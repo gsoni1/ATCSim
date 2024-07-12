@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56c8de2e-7eff-4de6-ad45-7e612527ec89" name="Changes" comment="" />
+    <list default="true" id="56c8de2e-7eff-4de6-ad45-7e612527ec89" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atc/atcsim/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atc/atcsim/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atc/atcsim/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atc/atcsim/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/atc/atcsim/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/atc/atcsim/hello-view.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,9 +52,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2j8LPZVO6pNasSbMMeX4V6ta6gB" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -60,6 +66,9 @@
     "Gradle.ATCSim [build].executor": "Run",
     "Gradle.ATCSim [test].executor": "Run",
     "Gradle.ATCSim.executor": "Run",
+    "Gradle.ATCsim [:HelloApplication.main()].executor": "Run",
+    "Gradle.ATCsim [build].executor": "Run",
+    "Gradle.ATCsim [test].executor": "Run",
     "Gradle.AirspaceTest.executor": "Run",
     "Gradle.AirspaceTest.testGetPlaneInAirspace.executor": "Run",
     "Gradle.AirspaceTest.testGetPlaneInAirspace2.executor": "Run",
@@ -72,7 +81,8 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true"
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Program Files (x86)/Oracle/JavaFX Scene Builder 2.0/JavaFX Scene Builder 2.0.exe"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -92,7 +102,7 @@
       <command value="gradle test" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.ATCSim [test]">
+  <component name="RunManager">
     <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="atc.atcsim.HelloApplication" />
       <module name="ATCsim.main" />
@@ -150,7 +160,7 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="AirspaceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ATCsim [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -161,20 +171,18 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;AirspaceTest&quot;" />
+            <option value="build" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="AirspaceTest.testRemoveFromAirspace2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ATCsim [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -185,26 +193,24 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;AirspaceTest.testRemoveFromAirspace2&quot;" />
+            <option value="test" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ATCsim [test]" />
+        <item itemvalue="Gradle.ATCsim [build]" />
         <item itemvalue="Gradle.ATCSim [test]" />
         <item itemvalue="Gradle.ATCSim [build]" />
         <item itemvalue="Application.HelloApplication" />
-        <item itemvalue="Gradle.AirspaceTest" />
-        <item itemvalue="Gradle.AirspaceTest.testRemoveFromAirspace2" />
       </list>
     </recent_temporary>
   </component>
