@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56c8de2e-7eff-4de6-ad45-7e612527ec89" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atc/atcsim/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atc/atcsim/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atc/atcsim/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atc/atcsim/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atc/atcsim/Airspace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atc/atcsim/Airspace.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/atc/atcsim/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/atc/atcsim/hello-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,6 +44,7 @@
       <list>
         <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -56,6 +55,9 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2j8LPZVO6pNasSbMMeX4V6ta6gB" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -102,7 +104,7 @@
       <command value="gradle test" />
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Gradle.ATCSim [test]">
     <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="atc.atcsim.HelloApplication" />
       <module name="ATCsim.main" />
@@ -206,9 +208,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.ATCsim [test]" />
-        <item itemvalue="Gradle.ATCsim [build]" />
         <item itemvalue="Gradle.ATCSim [test]" />
+        <item itemvalue="Gradle.ATCsim [build]" />
+        <item itemvalue="Gradle.ATCsim [test]" />
         <item itemvalue="Gradle.ATCSim [build]" />
         <item itemvalue="Application.HelloApplication" />
       </list>
