@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="56c8de2e-7eff-4de6-ad45-7e612527ec89" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atc/atcsim/Airspace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atc/atcsim/Airspace.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/atc/atcsim/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/atc/atcsim/hello-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +68,7 @@
     "Gradle.ATCSim.executor": "Run",
     "Gradle.ATCsim [:HelloApplication.main()].executor": "Run",
     "Gradle.ATCsim [build].executor": "Run",
+    "Gradle.ATCsim [clean].executor": "Run",
     "Gradle.ATCsim [test].executor": "Run",
     "Gradle.AirspaceTest.executor": "Run",
     "Gradle.AirspaceTest.testGetPlaneInAirspace.executor": "Run",
@@ -100,24 +99,12 @@
       <command value="gradle --scan" />
       <command value="gradle --stacktrace" />
       <command value="gradle --warning-mode all" />
-      <command value="gradle build" />
       <command value="gradle test" />
+      <command value="gradle clean" />
+      <command value="gradle build" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.ATCSim [test]">
-    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="atc.atcsim.HelloApplication" />
-      <module name="ATCsim.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="atc.atcsim.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Gradle.ATCsim [build]">
     <configuration name="ATCSim [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -184,6 +171,28 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="ATCsim [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="ATCsim [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -208,11 +217,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ATCsim [clean]" />
         <item itemvalue="Gradle.ATCSim [test]" />
         <item itemvalue="Gradle.ATCsim [build]" />
         <item itemvalue="Gradle.ATCsim [test]" />
         <item itemvalue="Gradle.ATCSim [build]" />
-        <item itemvalue="Application.HelloApplication" />
       </list>
     </recent_temporary>
   </component>
