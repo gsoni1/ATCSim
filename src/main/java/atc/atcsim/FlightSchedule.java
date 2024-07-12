@@ -1,4 +1,5 @@
-package org.example;
+package atc.atcsim;
+
 
 /**
  * The flightschedule class is a class that is essentially a flight information display, with no methods.

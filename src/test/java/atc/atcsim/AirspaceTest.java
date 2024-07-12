@@ -1,5 +1,6 @@
-import org.example.Airspace;
-import org.example.Plane;
+package atc.atcsim;
+
+import atc.atcsim.*;
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 

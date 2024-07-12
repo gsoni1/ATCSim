@@ -1,10 +1,10 @@
-import org.example.Airspace;
-import org.example.Plane;
-import org.example.Runway;
+package atc.atcsim;
+
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
+ * Test class for the Runway class
  * @author Gautam Soni
  * @version 7/10/24
  */
@@ -19,7 +19,6 @@ public class RunwayTest {
         jfk = new Airspace();
         L27 = new Runway("twenty seven left", jfk);
         AI101 = new Plane("AI101", "Mid air");
-
     }
 
     @Test

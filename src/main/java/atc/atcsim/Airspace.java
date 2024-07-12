@@ -1,4 +1,4 @@
-package org.example;
+package atc.atcsim;
 import java.util.HashMap;
 
 /**
@@ -10,21 +10,28 @@ import java.util.HashMap;
  */
 public class Airspace {
     // Fields
-    private HashMap<String, Plane> airspace;
+    private HashMap<String, Plane> airspace; // hashmap that stores all the planes
+    private boolean airspaceOpen; // boolean to hold the status of whether the airspace is open or not
 
     /**
      * Create a new Airspace Object.
      */
     public Airspace() {
         airspace =  new HashMap<String, Plane>();
+        airspaceOpen = true; // instantiate the airspace as open
     }
 
     /**
-     * Adds the specified plane to the airspace
+     * Adds the specified plane to the airspace if the airspace is open
      * @param p Plane to be added
      */
     public void addToAirspace(Plane p) {
-        airspace.put(p.getPlaneCallSign(), p);
+        if (airspaceOpen) {
+            airspace.put(p.getPlaneCallSign(), p);
+        }
+        else {
+            System.out.println("The airspace is closed!");
+        }
     }
 
     /**
@@ -46,10 +53,13 @@ public class Airspace {
         return airspace.get(p.getPlaneCallSign());
     }
 
+    public void closeAirspace() {
+        airspaceOpen = false;
+    }
+
     public void clearAirspace() {
         airspace.clear();
     }
-
     public int getAirspaceCapacity() {
         return airspace.size();
     }
