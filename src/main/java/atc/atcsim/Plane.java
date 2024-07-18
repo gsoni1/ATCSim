@@ -28,10 +28,25 @@ public class Plane {
 
     /**
      * Create a new Plane object.
-     * @param callSign assigned (Eg. AI101)
-     * @param planeStatus assigned (Eg. Mid air)
+     * @param planeCallSign assigned (Eg. AI101)
+     * @param planeFlightStatus assigned (Eg. delayed)
+     * @param planeModel assigned
+     * @param planeAltitude assigned (Eg. 30945 Ft.)
+     * @param planeSpeed assigned (Eg. 498 kts)
+     * @param planeFlightNumber assigned (Eg. EK61)
+     * @param planeIATATypeCode assigned (Eg. B77W)
+     * @param planeRegistration assigned (Eg. A6- EQB)
+     * @param planeAirline assigned (Eg. Qantas)
+     * @param planeOrigin assigned (Eg. FRA)
+     * @param planeDestination assigned (Eg. DXB)
+     * @param planeArrivalTime assigned (Eg. 7.00 EST)
+     * @param planeDepartureTime assigned (Eg. 14.00 EST)
+     * @param planeNumberOfPassengers assigned (Eg. 200)
+     * @param planeFlightTime assigned (Eg. 14)
+     * @param planeStatus assigned (Eg. taking off)
+     *
      */
-    public Plane(String planeCallSign, String planeFlightStatus, int planeAltitude, int planeSpeed, String planeFlightNumber, String planeIATATypeCode, String planeRegistration, String planeAirline, String planeOrigin, String planeDestination, Double planeArrivalTime, Double planeDepartureTime, int planeNumberOfPassengers, int planeFlightTime, String planeStatus) {
+    public Plane(String planeCallSign, String planeFlightStatus, int planeAltitude, int planeSpeed, String planeFlightNumber, String planeIATATypeCode, String planeRegistration, String planeAirline, String planeOrigin, String planeDestination, Double planeArrivalTime, Double planeDepartureTime, int planeNumberOfPassengers, int planeFlightTime, String planeStatus, String planeModel) {
         this.planeCallSign = planeCallSign;
         this.planeFlightStatus = planeFlightStatus;
         this.planeAltitude = planeAltitude;
@@ -47,6 +62,7 @@ public class Plane {
         this.planeNumberOfPassengers = planeNumberOfPassengers;
         this.planeFlightTime = planeFlightTime;
         this.planeStatus = planeStatus;
+        this.planeModel = planeModel;
     }
 
     /**
