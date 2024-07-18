@@ -10,12 +10,12 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class RunwayTest {
     // fields
-    private static Runway L27;
-    private static Plane AI101;
-    private static Airspace jfk;
+    private Runway L27;
+    private Plane AI101;
+    private Airspace jfk;
 
-    @BeforeAll
-    public static void setUp() {
+    @BeforeEach
+    public void setUp() {
         jfk = new Airspace();
         L27 = new Runway("twenty seven left", jfk);
         AI101 = new Plane("AI101", "Mid air");
@@ -37,9 +37,25 @@ public class RunwayTest {
 
     @Test
     public void testClearForLanding() {
+        jfk.addToAirspace(AI101);
         L27.addToLandingQueue(AI101);
         assertEquals(AI101, jfk.getPlaneInAirspace(AI101));
         L27.clearForLanding(AI101);
         assertNull(jfk.getPlaneInAirspace(AI101));
+    }
+
+    @Test
+    public void testGetTakeoffQueueSize() {
+        assertEquals(L27.getTakeoffQueueSize(), 0);
+        L27.addToTakeoffQueue(AI101);
+        assertEquals(L27.getTakeoffQueueSize(), 1);
+    }
+
+    @Test
+    public void testGetlandingQueueSize() {
+        assertEquals(L27.getLandingQueueSize(), 0);
+        jfk.addToAirspace(AI101);
+        L27.addToLandingQueue(AI101);
+        assertEquals(L27.getLandingQueueSize(), 1);
     }
 }

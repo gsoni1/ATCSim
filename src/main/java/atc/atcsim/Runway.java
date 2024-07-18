@@ -32,9 +32,24 @@ public class Runway {
 
     // methods
     public void addToTakeoffQueue(Plane p) {
-        takeoffQueue.add(p);
+        if (!getTakeoffQueue(p)) {
+            takeoffQueue.add(p);
+        }
     }
 
+    /**
+     * Returns if a plane is already in the takeoff queue, prevents duplicate entries. Overloaded method.
+     * @param p Plane to be checked
+     * @return true/false if plane is in takeoff queue
+     */
+    public boolean getTakeoffQueue(Plane p) {
+        return takeoffQueue.contains(p);
+    }
+
+    /**
+     * Returns the first plane in line in the takeoff queue.
+     * @return first entry in the takeoff queue
+     */
     public Plane getTakeoffQueue() {
         return takeoffQueue.peek();
     }
@@ -45,15 +60,41 @@ public class Runway {
      * @param p Plane to be removed
      */
     public void removeFromTakeoffQueue(Plane p) {
-        takeoffQueue.remove(p);
+        if (getTakeoffQueue(p)) {
+            takeoffQueue.remove(p);
+        }
     }
 
+    /**
+     * Removes the plane at the front of the takeoff queue.
+     */
+    public void removeFromTakeoffQueue() {
+        takeoffQueue.remove();
+    }
+
+    /**
+     * Getter method for the size of the takeoff queue.
+     * @return number of planes in the takeoff queue.
+     */
+    public int getTakeoffQueueSize() {
+        return takeoffQueue.size();
+    }
     /**
      * Adds the specified plane to the landing queue, in preparation to land soon.
      * @param p Plane to be removed
      */
     public void addToLandingQueue(Plane p) {
-        landingQueue.add(p);
+        if (!getLandingQueue(p)) {
+            landingQueue.add(p);
+        }
+    }
+
+    /**
+     * Getter method for the size of the landing queue.
+     * @return number of planes in the landing queue.
+     */
+    public int getLandingQueueSize() {
+        return landingQueue.size();
     }
 
     /**
@@ -61,7 +102,33 @@ public class Runway {
      * @param p Plane to be removed
      */
     public void removeFromLandingQueue(Plane p) {
-        landingQueue.remove(p);
+        if (getLandingQueue(p)) {
+            landingQueue.remove(p);
+        }
+    }
+
+    /**
+     * Removes the plane at the front of the landing queue.
+     */
+    public void removeFromLandingQueue() {
+        landingQueue.remove();
+    }
+
+    /**
+     * Returns if a plane is already in the landing queue, prevents duplicate entries. Overloaded method.
+     * @param p Plane to be checked
+     * @return true/false if plane is in landing queue
+     */
+    public boolean getLandingQueue(Plane p) {
+        return landingQueue.contains(p);
+    }
+
+    /**
+     * Returns the first plane in line in the landing queue.
+     * @return first entry in the landing queue
+     */
+    public Plane getLandingQueue() {
+        return landingQueue.peek();
     }
 
     /**

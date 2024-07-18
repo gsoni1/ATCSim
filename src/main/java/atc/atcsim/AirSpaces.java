@@ -13,6 +13,7 @@ public interface AirSpaces {
     public Plane getPlaneInAirspace(Plane p);
     public void closeAirspace();
     public void openAirspace();
+    public boolean getAirspaceClearance();
     public void clearAirspace();
     public int getAirspaceCapacity();
 }

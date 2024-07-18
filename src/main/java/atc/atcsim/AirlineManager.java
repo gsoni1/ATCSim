@@ -13,7 +13,7 @@ public class AirlineManager {
     private String[] airlineFleet;
 
     public AirlineManager() {
-//        airlineFleet = new String[3][8];
+        airlineFleet = new String[3];
         airlineFleet[0] = "Boeing";
         airlineFleet[1] = "Airbus";
         airlineFleet[2] = "Other";

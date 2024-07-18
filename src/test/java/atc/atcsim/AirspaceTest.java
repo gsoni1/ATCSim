@@ -11,34 +11,43 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class AirspaceTest {
     // fields
-    private static Airspace londonHeathrow;
-    private static Plane AI101;
+    private Airspace londonHeathrow;
+    private Plane AI101;
 
     /**
      * SetUp method, initializes all the instance variables
      */
-    @BeforeAll
-    public static void setUp() {
+    @BeforeEach
+    public void setUp() {
         londonHeathrow = new Airspace();
         AI101 = new Plane("AI101", "Mid air");
     }
+
     /**
      * Tests the addToAirspace method using a plane that exists within the airspace.
-     * This covers the case of a plane entering the airspace.
      */
     @Test
-    public void testAddToAirspace() {
+    public void testAddToAirspaceOpen() {
         londonHeathrow.addToAirspace(AI101);
         assertEquals(AI101, londonHeathrow.getPlaneInAirspace(AI101));
+    }
+
+    /**
+     * Tests the addToAirspace method when the airspace is closed, so the plane is not added.
+     */
+    @Test
+    public void testAddToAirspaceClosed() {
+        londonHeathrow.closeAirspace();
+        londonHeathrow.addToAirspace(AI101);
+        assertNotEquals(AI101, londonHeathrow.getPlaneInAirspace(AI101));
     }
 
     /**
      * Tests the removeFromAirspace method using a plane that exists in the airspace, first by adding then removing the
      * plane.
-     * This covers the case of a plane leaving the airspace.
      */
     @Test
-    public void testRemoveFromAirspace() {
+    public void testRemoveFromAirspaceExists() {
         londonHeathrow.addToAirspace(AI101);
         assertEquals(AI101, londonHeathrow.getPlaneInAirspace(AI101));
         londonHeathrow.removeFromAirspace(AI101);
@@ -46,33 +55,71 @@ public class AirspaceTest {
     }
 
     /**
-     * Tests the removeFromAirspace method using a plane that does not exist in the airspace, first by adding then removing the
-     * plane
-     * This covers the case of a plane on the ground or not in the airspace.
+     * Tests the removeFromAirspace method using a plane that does not exist in the airspace, first by adding then
+     * removing the plane.
      */
     @Test
-    public void testRemoveFromAirspace2() {
+    public void testRemoveFromAirspaceDoesNotExist() {
         londonHeathrow.removeFromAirspace(AI101);
         assertNotEquals(AI101, londonHeathrow.getPlaneInAirspace(AI101));
+        assertNull(londonHeathrow.getPlaneInAirspace(AI101));
     }
 
     /**
      * Tests the getPlaneInAirspace method using a plane that doesn't exist in the airspace.
-     * This covers the case of a plane being on the ground or not in the airspace.
      */
     @Test
-    public void testGetPlaneInAirspace() {
-        assertEquals(null, londonHeathrow.getPlaneInAirspace(AI101));
+    public void testGetPlaneInAirspaceDoesNotExist() {
+        assertNull(londonHeathrow.getPlaneInAirspace(AI101));
     }
 
     /**
      * Tests the getPlaneInAirspace method using a plane that exists in the airspace
-     * This covers the case of a plane being in the airspace.
      */
     @Test
-    public void testGetPlaneInAirspace2() {
+    public void testGetPlaneInAirspaceExists() {
         londonHeathrow.addToAirspace(AI101);
         assertEquals(AI101, londonHeathrow.getPlaneInAirspace(AI101));
     }
 
+    /**
+     * Tests the clearAirspace method using a single plane in the airspace.
+     */
+    @Test
+    public void testClearAirspace() {
+        londonHeathrow.addToAirspace(AI101);
+        assertEquals(londonHeathrow.getAirspaceCapacity(), 1);
+        londonHeathrow.clearAirspace();
+        assertEquals(londonHeathrow.getAirspaceCapacity(), 0);
+    }
+
+    /**
+     * Tests the openAirspace method by closing and opening the airspace
+     */
+    @Test
+    public void testOpenAirspace() {
+        assertTrue(londonHeathrow.getAirspaceClearance());
+        londonHeathrow.closeAirspace();
+        assertFalse(londonHeathrow.getAirspaceClearance());
+        londonHeathrow.openAirspace();
+        assertTrue(londonHeathrow.getAirspaceClearance());
+    }
+
+    /**
+     * Tests the closeAirspace method by closing the airspace
+     */
+    public void testCloseAirspace() {
+        londonHeathrow.closeAirspace();
+        assertFalse(londonHeathrow.getAirspaceClearance());
+    }
+
+    /**
+     * Tests the getAirspaceCapacity method
+     */
+    @Test
+    public void testGetAirspaceCapacity() {
+        assertEquals(londonHeathrow.getAirspaceCapacity(), 0);
+        londonHeathrow.addToAirspace(AI101);
+        assertEquals(londonHeathrow.getAirspaceCapacity(), 1);
+    }
 }

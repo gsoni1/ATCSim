@@ -30,9 +30,6 @@ public class Airspace implements AirSpaces {
         if (airspaceOpen) {
             airspace.put(p.getPlaneCallSign(), p);
         }
-        else {
-            System.out.println("The airspace is closed!");
-        }
     }
 
     /**
@@ -41,7 +38,7 @@ public class Airspace implements AirSpaces {
      */
     @Override
     public void removeFromAirspace(Plane p) {
-        if (p.getPlaneCallSign() != null) {
+        if (getPlaneInAirspace(p) != null) {
             airspace.remove(p.getPlaneCallSign());
         }
     }
@@ -70,6 +67,15 @@ public class Airspace implements AirSpaces {
     @Override
     public void openAirspace() {
         airspaceOpen = true;
+    }
+
+    /**
+     * Getter method for the airspace clearance
+     * @return true/false if the airspace is open
+     */
+    @Override
+    public boolean getAirspaceClearance() {
+        return airspaceOpen;
     }
 
     /**
