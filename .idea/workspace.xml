@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56c8de2e-7eff-4de6-ad45-7e612527ec89" name="Changes" comment="">
+    <list default="true" id="56c8de2e-7eff-4de6-ad45-7e612527ec89" name="Changes" comment="Plane Class constructor Completed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atc/atcsim/AirSpaces.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atc/atcsim/AirSpaces.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atc/atcsim/AirlineManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atc/atcsim/AirlineManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atc/atcsim/Airspace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atc/atcsim/Airspace.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atc/atcsim/Runway.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atc/atcsim/Runway.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/atc/atcsim/AirspaceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/atc/atcsim/AirspaceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/atc/atcsim/RunwayTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/atc/atcsim/RunwayTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atc/atcsim/Groundspace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atc/atcsim/Groundspace.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atc/atcsim/Plane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atc/atcsim/Plane.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,11 +54,23 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "arihitaD"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/gsoni1/ATCSim.git",
+    "accountId": "ed78bb0d-81c6-4d09-bb30-57b5f36b2b6e"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2j8LPZVO6pNasSbMMeX4V6ta6gB" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -71,6 +79,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
     "Gradle.ATCSim [:HelloApplication.main()].executor": "Run",
     "Gradle.ATCSim [build].executor": "Run",
     "Gradle.ATCSim [test].executor": "Run",
@@ -80,7 +89,7 @@
     "Gradle.ATCsim [clean].executor": "Run",
     "Gradle.ATCsim [publish].executor": "Run",
     "Gradle.ATCsim [test].executor": "Run",
-    "Gradle.AirspaceTest.executor": "Coverage",
+    "Gradle.AirspaceTest.executor": "Run",
     "Gradle.AirspaceTest.testAddToAirspace2.executor": "Run",
     "Gradle.AirspaceTest.testGetPlaneInAirspace.executor": "Run",
     "Gradle.AirspaceTest.testGetPlaneInAirspace2.executor": "Run",
@@ -89,6 +98,9 @@
     "Gradle.RunwayTest.testAddToTakeoffQueue.executor": "Run",
     "Gradle.RunwayTest.testClearForTakeoff.executor": "Run",
     "Gradle.Upgrade Gradle wrapper.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
@@ -112,11 +124,33 @@
       <command value="gradle --warning-mode all" />
       <command value="gradle clean" />
       <command value="gradle publish" />
-      <command value="gradle build" />
       <command value="gradle test" />
+      <command value="gradle build" />
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Gradle.ATCSim [build]">
+    <configuration name="ATCSim [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="ATCSim [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -129,28 +163,6 @@
         <option name="taskNames">
           <list>
             <option value="test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="ATCsim [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="build" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -231,11 +243,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ATCSim [build]" />
         <item itemvalue="Gradle.AirspaceTest.testAddToAirspace2" />
         <item itemvalue="Gradle.ATCsim [publish]" />
         <item itemvalue="Gradle.ATCsim [clean]" />
         <item itemvalue="Gradle.ATCSim [test]" />
-        <item itemvalue="Gradle.ATCsim [build]" />
       </list>
     </recent_temporary>
   </component>
@@ -249,6 +261,10 @@
       <updated>1720763735643</updated>
     </task>
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Plane Class constructor Completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Plane Class constructor Completed" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ATCsim$RunwayTest.ic" NAME="RunwayTest Coverage Results" MODIFIED="1721316352690" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
