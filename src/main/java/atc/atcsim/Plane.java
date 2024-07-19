@@ -12,9 +12,6 @@ public class Plane {
     private String planeModel;
     private int planeAltitude; // 39025 Ft
     private int planeSpeed; // 498 Kts
-    private Double planeCoordinatesX; // 40.807756
-    private Double planeCoordinatesY; // -73.961614
-    private Double[] planeCoordinates; // [planeCoordinatesX, planeCoordinatesY]
     private String planeCallSign; // UAE61
     private String planeFlightNumber; // EK61
     private String planeIATATypeCode; // B77W
@@ -31,12 +28,41 @@ public class Plane {
 
     /**
      * Create a new Plane object.
-     * @param callSign assigned (Eg. AI101)
-     * @param planeStatus assigned (Eg. Mid air)
+     * @param planeCallSign assigned (Eg. AI101)
+     * @param planeFlightStatus assigned (Eg. delayed)
+     * @param planeModel assigned
+     * @param planeAltitude assigned (Eg. 30945 Ft.)
+     * @param planeSpeed assigned (Eg. 498 kts)
+     * @param planeFlightNumber assigned (Eg. EK61)
+     * @param planeIATATypeCode assigned (Eg. B77W)
+     * @param planeRegistration assigned (Eg. A6- EQB)
+     * @param planeAirline assigned (Eg. Qantas)
+     * @param planeOrigin assigned (Eg. FRA)
+     * @param planeDestination assigned (Eg. DXB)
+     * @param planeArrivalTime assigned (Eg. 7.00 EST)
+     * @param planeDepartureTime assigned (Eg. 14.00 EST)
+     * @param planeNumberOfPassengers assigned (Eg. 200)
+     * @param planeFlightTime assigned (Eg. 14)
+     * @param planeStatus assigned (Eg. taking off)
+     *
      */
-    public Plane(String callSign, String planeStatus) {
-        planeCallSign = callSign;
-        planeFlightStatus = planeStatus;
+    public Plane(String planeCallSign, String planeFlightStatus, int planeAltitude, int planeSpeed, String planeFlightNumber, String planeIATATypeCode, String planeRegistration, String planeAirline, String planeOrigin, String planeDestination, Double planeArrivalTime, Double planeDepartureTime, int planeNumberOfPassengers, int planeFlightTime, String planeStatus, String planeModel) {
+        this.planeCallSign = planeCallSign;
+        this.planeFlightStatus = planeFlightStatus;
+        this.planeAltitude = planeAltitude;
+        this.planeSpeed = planeSpeed;
+        this.planeFlightNumber = planeFlightNumber;
+        this.planeIATATypeCode = planeIATATypeCode;
+        this.planeRegistration = planeRegistration;
+        this.planeAirline = planeAirline;
+        this.planeOrigin = planeOrigin;
+        this.planeDestination = planeDestination;
+        this.planeArrivalTime = planeArrivalTime;
+        this.planeDepartureTime = planeDepartureTime;
+        this.planeNumberOfPassengers = planeNumberOfPassengers;
+        this.planeFlightTime = planeFlightTime;
+        this.planeStatus = planeStatus;
+        this.planeModel = planeModel;
     }
 
     /**
@@ -81,33 +107,6 @@ public class Plane {
         return planeSpeed;
     }
 
-    /**
-     * Getter method for variable planeCoordinatesX
-     * @return x coordinates of the plane
-     */
-    public Double getPlaneCoordinatesX()
-    {
-        return planeCoordinatesX;
-    }
-
-    /**
-     * Getter method for variable planeCoordinatesY
-     * @return y coordinates of the plane
-     */
-    public Double getPlaneCoordinatesY()
-    {
-        return planeCoordinatesY;
-    }
-
-    /**
-     * Getter method for variable planeCoordinates
-     * @return array with x and y coordinates as [planeCoordinatesX, planeCoordinatesY]
-     */
-    public Double getPlaneCoordinates()
-    {
-//        return planeCoordinates[planeCoordinatesX, planeCoordinatesY];
-        return 0.0;
-    }
 
     /**
      * Getter method for variable planeFlightNumber
@@ -206,5 +205,14 @@ public class Plane {
     public String getPlaneStatus()
     {
         return planeStatus;
+    }
+
+    /**
+     * Setter
+     */
+
+    public void setPlaneModel(String p)
+    {
+        planeModel = p;
     }
 }
