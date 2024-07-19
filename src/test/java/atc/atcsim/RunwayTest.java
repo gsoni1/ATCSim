@@ -29,6 +29,12 @@ public class RunwayTest {
     }
 
     @Test
+    public void testAddToTakeoffQueueAlreadyExists() {
+        L27.addToTakeoffQueue(AI101);
+        L27.addToTakeoffQueue(AI101);
+    }
+
+    @Test
     public void testClearForTakeoff() {
         L27.addToTakeoffQueue(AI101);
         L27.clearForTakeoff(AI101);
@@ -52,10 +58,15 @@ public class RunwayTest {
     }
 
     @Test
-    public void testGetlandingQueueSize() {
+    public void testGetLandingQueueSize() {
         assertEquals(L27.getLandingQueueSize(), 0);
         jfk.addToAirspace(AI101);
         L27.addToLandingQueue(AI101);
         assertEquals(L27.getLandingQueueSize(), 1);
+    }
+
+    @Test
+    public void testRemoveFromTakeoffQueue() {
+
     }
 }
