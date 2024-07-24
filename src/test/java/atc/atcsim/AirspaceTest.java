@@ -20,7 +20,7 @@ public class AirspaceTest {
     @BeforeEach
     public void setUp() {
         londonHeathrow = new Airspace();
-        AI101 = new Plane("AI101", "Mid air",39025,498,"EK61", "B77W","A6- EQB", "Qantas", "FRA", "DXB", 7.00, 14.00, 200, 14,"taking off", "delayed");
+        AI101 = new Plane("AI101", "Mid air","EK61", "B77W","A6- EQB", "Qantas", "FRA", "DXB", 7.00, 14.00, 200, 14,"taking off", "delayed");
     }
 
     /**

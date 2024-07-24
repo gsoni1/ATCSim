@@ -5,13 +5,11 @@ package atc.atcsim;
  * Plane class, contains all the variables related to a specific plane. Provides getter and setter methods to modify and
  * access plane variables.
  *
- * @author Arihita Dirghangi
+ * @author Gautam Soni and Arihita Dirghangi
  * @version 7/10/2024
  */
 public class Plane {
     private String planeModel;
-    private int planeAltitude; // 39025 Ft
-    private int planeSpeed; // 498 Kts
     private String planeCallSign; // UAE61
     private String planeFlightNumber; // EK61
     private String planeIATATypeCode; // B77W
@@ -31,8 +29,6 @@ public class Plane {
      * @param planeCallSign assigned (Eg. AI101)
      * @param planeFlightStatus assigned (Eg. delayed)
      * @param planeModel assigned
-     * @param planeAltitude assigned (Eg. 30945 Ft.)
-     * @param planeSpeed assigned (Eg. 498 kts)
      * @param planeFlightNumber assigned (Eg. EK61)
      * @param planeIATATypeCode assigned (Eg. B77W)
      * @param planeRegistration assigned (Eg. A6- EQB)
@@ -46,11 +42,9 @@ public class Plane {
      * @param planeStatus assigned (Eg. taking off)
      *
      */
-    public Plane(String planeCallSign, String planeFlightStatus, int planeAltitude, int planeSpeed, String planeFlightNumber, String planeIATATypeCode, String planeRegistration, String planeAirline, String planeOrigin, String planeDestination, Double planeArrivalTime, Double planeDepartureTime, int planeNumberOfPassengers, int planeFlightTime, String planeStatus, String planeModel) {
+    public Plane(String planeCallSign, String planeFlightStatus, String planeFlightNumber, String planeIATATypeCode, String planeRegistration, String planeAirline, String planeOrigin, String planeDestination, Double planeArrivalTime, Double planeDepartureTime, int planeNumberOfPassengers, int planeFlightTime, String planeStatus, String planeModel) {
         this.planeCallSign = planeCallSign;
         this.planeFlightStatus = planeFlightStatus;
-        this.planeAltitude = planeAltitude;
-        this.planeSpeed = planeSpeed;
         this.planeFlightNumber = planeFlightNumber;
         this.planeIATATypeCode = planeIATATypeCode;
         this.planeRegistration = planeRegistration;
@@ -87,24 +81,6 @@ public class Plane {
     public String getPlaneModel()
     {
         return planeModel;
-    }
-
-    /**
-     * Getter method for variable planeAltitude
-     * @return altitude of the plane in feet
-     */
-    public int getPlaneAltitude()
-    {
-        return planeAltitude;
-    }
-
-    /**
-     * Getter method for variable planeSpeed
-     * @return speed of the plane in Kts
-     */
-    public int getPlaneSpeed()
-    {
-        return planeSpeed;
     }
 
 
@@ -214,5 +190,9 @@ public class Plane {
     public void setPlaneModel(String p)
     {
         planeModel = p;
+    }
+
+    public void setPlaneStatus(String p) {
+        planeStatus = p;
     }
 }
