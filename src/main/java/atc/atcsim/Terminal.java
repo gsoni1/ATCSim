@@ -14,6 +14,16 @@ public class Terminal {
     HashMap<String, Plane> gates = new HashMap<>();
 
     /**
+     * Method that returns the plane object when the name is searched
+     * @param gateName is the name of the gate
+     * @return plane object for the gate name
+     */
+    public Plane getPlane(String gateName)
+    {
+        return gates.get(gateName);
+    }
+
+    /**
      * Method that takes a plane object and adds it to the gate
      * @param p is the object to be added
      * @param gateName is the string name of the gate, Eg:- 14D
