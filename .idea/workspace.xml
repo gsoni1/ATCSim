@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56c8de2e-7eff-4de6-ad45-7e612527ec89" name="Changes" comment="Terminal class rewritten with Hashmaps">
+    <list default="true" id="56c8de2e-7eff-4de6-ad45-7e612527ec89" name="Changes" comment="Added more conditions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/atc/atcsim/Terminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atc/atcsim/Terminal.java" afterDir="false" />
     </list>
@@ -318,7 +318,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721925803213</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added more conditions">
+      <option name="closed" value="true" />
+      <created>1721925943073</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1721925943073</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -340,7 +348,8 @@
     <MESSAGE value="Terminal Class" />
     <MESSAGE value="Terminal Class methods made" />
     <MESSAGE value="Terminal class rewritten with Hashmaps" />
-    <option name="LAST_COMMIT_MESSAGE" value="Terminal class rewritten with Hashmaps" />
+    <MESSAGE value="Added more conditions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added more conditions" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ATCsim$ATCSim__test_.ic" NAME="ATCSim [test] Coverage Results" MODIFIED="1721406127898" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />

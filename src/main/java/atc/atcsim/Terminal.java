@@ -31,10 +31,15 @@ public class Terminal {
     /**
      * Method that remove's the gate for a cancelled or postponed flight
      * @param gateName is the gate being removed
+     * @return boolean to indicate whether remove was successful or not
      */
-    public void removeGate(String gateName)
+    public boolean removeGate(String gateName)
     {
-        gates.remove(gateName);
+        if(containsGate(gateName)) {
+            gates.remove(gateName);
+            return true;
+        }
+        return false;
     }
 
     /**
