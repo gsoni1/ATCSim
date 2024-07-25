@@ -9,5 +9,6 @@ package atc.atcsim;
  * @version 7/10/24
  */
 public class Terminal {
-    //
+
+    ArrayList<String> gates = new ArrayList<String>();
 }
