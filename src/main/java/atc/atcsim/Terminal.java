@@ -11,41 +11,37 @@ import java.util.*;
  */
 public class Terminal {
 
-    ArrayList<Plane> gates = new ArrayList<Plane>();
-
-    //methods to add, remove, search objects from the ArrayList
+    HashMap<String, Plane> gates = new HashMap<>();
 
     /**
      * Method that takes a plane object and adds it to the gate
      * @param p is the object to be added
+     * @param name is the string name of the gate, Eg:- 14D
      */
-    public void addGate(Plane p)
+    public void addGate(String name, Plane p)
     {
-        gates.add(p);
+        gates.put(name,p);
     }
 
     /**
      * Method that remove's the gate for a cancelled or postponed flight
-     * @param p is the plane object being removed
+     * @param name is the gate being removed
      */
-    public void removeGate(Plane p)
+    public void removeGate(String name)
     {
-        gates.remove(p);
+        gates.remove(name);
     }
 
     /**
      * Method to check if plane object exists in the Gates Arraylist
-     * @param p is the plane object being searched for
+     * @param name is the gate name being searched for
      * @return boolean indicating whether the object has a Gate or not
      */
-    public boolean containsGate(Plane p)
+    public boolean containsGate(String name)
     {
-        for(int i = 0; i < gates.size(); i++)
+        if (gates.containsKey(name))
         {
-            if(gates.get(i) == p)
-            {
-                return true;
-            }
+            return true;
         }
         return false;
     }
