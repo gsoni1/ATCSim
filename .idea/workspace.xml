@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56c8de2e-7eff-4de6-ad45-7e612527ec89" name="Changes" comment="Setter methods in Plane Class completed">
-      <change beforePath="$PROJECT_DIR$/src/main/java/atc/atcsim/Plane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atc/atcsim/Plane.java" afterDir="false" />
+    <list default="true" id="56c8de2e-7eff-4de6-ad45-7e612527ec89" name="Changes" comment="Added java documentation to setter methods">
+      <change beforePath="$PROJECT_DIR$/src/main/java/atc/atcsim/Terminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atc/atcsim/Terminal.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -269,7 +269,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721923419945</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added java documentation to setter methods">
+      <option name="closed" value="true" />
+      <created>1721923697524</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1721923697524</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -287,7 +295,8 @@
     <MESSAGE value="GroundSpaces Interface and GroundSpace Class Completed" />
     <MESSAGE value="Class Terminal started" />
     <MESSAGE value="Setter methods in Plane Class completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Setter methods in Plane Class completed" />
+    <MESSAGE value="Added java documentation to setter methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added java documentation to setter methods" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ATCsim$ATCSim__test_.ic" NAME="ATCSim [test] Coverage Results" MODIFIED="1721406127898" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />

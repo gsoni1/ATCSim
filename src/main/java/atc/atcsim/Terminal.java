@@ -10,5 +10,5 @@ package atc.atcsim;
  */
 public class Terminal {
 
-    ArrayList<String> gates = new ArrayList<String>();
+    ArrayList<Plane> gates = new ArrayList<Plane>();
 }
