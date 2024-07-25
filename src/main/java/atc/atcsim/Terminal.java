@@ -16,30 +16,32 @@ public class Terminal {
     /**
      * Method that takes a plane object and adds it to the gate
      * @param p is the object to be added
-     * @param name is the string name of the gate, Eg:- 14D
+     * @param gateName is the string name of the gate, Eg:- 14D
      */
-    public void addGate(String name, Plane p)
+    public void addGate(String gateName, Plane p)
     {
-        gates.put(name,p);
+        if(!containsGate(gateName)) {
+            gates.put(gateName, p);
+        }
     }
 
     /**
      * Method that remove's the gate for a cancelled or postponed flight
-     * @param name is the gate being removed
+     * @param gateName is the gate being removed
      */
-    public void removeGate(String name)
+    public void removeGate(String gateName)
     {
-        gates.remove(name);
+        gates.remove(gateName);
     }
 
     /**
      * Method to check if plane object exists in the Gates Arraylist
-     * @param name is the gate name being searched for
+     * @param gateName is the gate name being searched for
      * @return boolean indicating whether the object has a Gate or not
      */
-    public boolean containsGate(String name)
+    public boolean containsGate(String gateName)
     {
-        if (gates.containsKey(name))
+        if (gates.containsKey(gateName))
         {
             return true;
         }
