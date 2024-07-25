@@ -17,12 +17,15 @@ public class Terminal {
      * Method that takes a plane object and adds it to the gate
      * @param p is the object to be added
      * @param gateName is the string name of the gate, Eg:- 14D
+     * @return boolean to indicate whether addition was successful or not
      */
-    public void addGate(String gateName, Plane p)
+    public boolean addGate(String gateName, Plane p)
     {
         if(!containsGate(gateName)) {
             gates.put(gateName, p);
+            return true;
         }
+        return false;
     }
 
     /**
