@@ -97,7 +97,7 @@ public class Plane {
      * Getter method for variable planeIATATypeCode
      * @return the IATA Type Code as a string
      */
-    public String planeIATATypeCode()
+    public String getPlaneIATATypeCode()
     {
         return planeIATATypeCode;
     }
@@ -106,7 +106,7 @@ public class Plane {
      * Getter method for variable planeRegistration
      * @return the plane registration code as a string
      */
-    public String planeRegistration()
+    public String getPlaneRegistration()
     {
         return planeRegistration;
     }
@@ -184,15 +184,123 @@ public class Plane {
     }
 
     /**
-     * Setter
+     * Setter method for variable planeModel
+     * @param p is the string name to be set for the planeModel
      */
-
     public void setPlaneModel(String p)
     {
         planeModel = p;
     }
 
+    /**
+     * Setter method for variable planeStatus
+     * @param p is the string description for the planeStatus
+     */
     public void setPlaneStatus(String p) {
         planeStatus = p;
+    }
+
+    /**
+     * Setter method for variable planeCallSign
+     * @param p is the string description for the plane's call sign
+     */
+    public void setPlaneCallSign(String p)
+    {
+        planeCallSign = p;
+    }
+
+    /**
+     * Setter method for variable planeFlightNumber
+     * @param p is the string description for the plane's flight number
+     */
+    public void setPlaneFlightNumber(String p)
+    {
+        planeFlightNumber = p;
+    }
+
+    /**
+     * Setter method for variable planeIATATypeCode
+     * @param p is the string description for the plane's IATA Type Code
+     */
+    public void setPlaneIATATypeCode(String p)
+    {
+        planeIATATypeCode = p;
+    }
+
+    /**
+     * Setter method for variable planeRegistration
+     * @param p is the string description for the plane registration status
+     */
+    public void setPlaneRegistration(String p)
+    {
+        planeRegistration = p;
+    }
+
+    /**
+     * Setter method for variable planeAirline
+     * @param p is the string description for the plane airline's name
+     */
+    public void setPlaneAirline(String p)
+    {
+        planeAirline = p;
+    }
+
+    /**
+     * Setter method for variable planeOrigin
+     * @param p is the string description for the plane's origin
+     */
+    public void setPlaneOrigin(String p)
+    {
+        planeOrigin = p;
+    }
+
+    /**
+     * Setter method for variable planeDestination
+     * @param p is the string description for the plane's destination
+     */
+    public void setPlaneDestination(String p)
+    {
+        planeDestination = p;
+    }
+
+    /**
+     * Setter method for variable planeArrivalTime
+     * @param p is the double variable for the plane's arrival time
+     */
+    public void setPlaneArrivalTime(Double p)
+    {
+        planeArrivalTime = p;
+    }
+
+    /**
+     * Setter method for variable planeDepartureTime
+     * @param p is the double variable for the plane's departure time
+     */
+    public void setPlaneDepartureTime(Double p)
+    {
+        planeDepartureTime = p;
+    }
+
+    /**
+     * Setter method for variable planeNumberOfPassengers
+     * @param n is the int variable for the number of passengers on the plane
+     */
+    public void setPlaneNumberOfPassengers(int n)
+    {
+        planeNumberOfPassengers = n;
+    }
+
+    /**
+     * Setter method for variable planeFlightTime
+     * @param n is the int variable for the flight time
+     */
+    public void setPlaneFlightTime(int n)
+    {
+        planeFlightTime = n;
+    }
+
+    public void setPlaneFlightStatus(String p)
+    {
+        planeFlightStatus = p;
     }
 }
