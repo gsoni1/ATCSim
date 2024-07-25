@@ -299,6 +299,10 @@ public class Plane {
         planeFlightTime = n;
     }
 
+    /**
+     * Setter method for variable planeFlightStatus
+     * @param p is the string variable for the flight status
+     */
     public void setPlaneFlightStatus(String p)
     {
         planeFlightStatus = p;
