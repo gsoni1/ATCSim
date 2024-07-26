@@ -5,7 +5,7 @@ package atc.atcsim;
  * Plane class, contains all the variables related to a specific plane. Provides getter and setter methods to modify and
  * access plane variables.
  *
- * @author Gautam Soni and Arihita Dirghangi
+ * @author Arihita Dirghangi
  * @version 7/10/2024
  */
 public class Plane {
