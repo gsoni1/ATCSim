@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56c8de2e-7eff-4de6-ad45-7e612527ec89" name="Changes" comment="Added more if conditions">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_25_2024_11_24_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_25_2024_11_24_AM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atc/atcsim/Plane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atc/atcsim/Plane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atc/atcsim/Terminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atc/atcsim/Terminal.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +17,9 @@
     <option name="myAddOrReplace" value="0" />
   </component>
   <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
@@ -45,9 +47,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -112,7 +114,7 @@
       <command value="gradle test" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.ATCsim [test]">
+  <component name="RunManager" selected="Gradle.ATCSim [test]">
     <configuration name="ATCSim [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -157,7 +159,7 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="ATCsim [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ATCsim [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -168,7 +170,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="build" />
+            <option value="clean" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -179,7 +181,7 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="ATCsim [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ATCsim [publish]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -190,7 +192,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="test" />
+            <option value="publish" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -227,11 +229,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.ATCsim [test]" />
-        <item itemvalue="Gradle.ATCsim [build]" />
         <item itemvalue="Gradle.ATCSim [test]" />
         <item itemvalue="Gradle.ATCSim [build]" />
         <item itemvalue="Gradle.AirspaceTest.testAddToAirspace2" />
+        <item itemvalue="Gradle.ATCsim [publish]" />
+        <item itemvalue="Gradle.ATCsim [clean]" />
       </list>
     </recent_temporary>
   </component>

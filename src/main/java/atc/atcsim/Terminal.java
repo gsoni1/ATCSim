@@ -13,6 +13,11 @@ public class Terminal {
 
     HashMap<String, Plane> gates = new HashMap<>();
 
+    public Terminal()
+    {
+        this.gates = gates;
+    }
+
     /**
      * Method that returns the plane object when the name is searched
      * @param gateName is the name of the gate
