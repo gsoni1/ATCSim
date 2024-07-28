@@ -8,12 +8,13 @@ package atc.atcsim;
  */
 public interface AirSpaces {
     // Method Declarations
-    public void addToAirspace(Plane p);
-    public void removeFromAirspace(Plane p);
+    public boolean addToAirspace(Plane p);
+    public boolean removeFromAirspace(Plane p);
     public Plane getPlaneInAirspace(Plane p);
     public void closeAirspace();
     public void openAirspace();
     public boolean getAirspaceClearance();
-    public void clearAirspace();
-    public int getAirspaceCapacity();
+    public boolean clearAirspace();
+    public int getAirspaceSize();
+    public boolean isAirspaceEmpty();
 }

@@ -23,28 +23,37 @@ public class Airspace implements AirSpaces {
 
     /**
      * Adds the specified plane to the airspace if the airspace is open
+     *
      * @param p Plane to be added
+     * @return true/false if plane was added to the airspace
      */
     @Override
-    public void addToAirspace(Plane p) {
+    public boolean addToAirspace(Plane p) {
         if (airspaceOpen) {
             airspace.put(p.getPlaneCallSign(), p);
+            return true;
         }
+        return false;
     }
 
     /**
      * Removes the specified plane from the airspace
+     *
      * @param p Plane to be removed
+     * @return true/false if plane was removed from the airspace
      */
     @Override
-    public void removeFromAirspace(Plane p) {
+    public boolean removeFromAirspace(Plane p) {
         if (getPlaneInAirspace(p) != null) {
             airspace.remove(p.getPlaneCallSign());
+            return true;
         }
+        return false;
     }
 
     /**
      * Getter method for the specified plane in airspace
+     *
      * @param p Plane to search for in airspace
      * @return Plane in the airspace
      */
@@ -71,6 +80,7 @@ public class Airspace implements AirSpaces {
 
     /**
      * Getter method for the airspace clearance
+     *
      * @return true/false if the airspace is open
      */
     @Override
@@ -80,18 +90,35 @@ public class Airspace implements AirSpaces {
 
     /**
      * Clears the airspace by removing all objects in the airspace hashmap.
+     *
+     * @return true/false if the airspace was cleared
      */
     @Override
-    public void clearAirspace() {
-        airspace.clear();
+    public boolean clearAirspace() {
+        if (!airspace.isEmpty()) {
+            airspace.clear();
+            return true;
+        }
+        return false;
     }
 
     /**
-     * Getter method for the airspace capacity
+     * Getter method for the airspace size
+     *
      * @return Number of planes currently in the airspace
      */
     @Override
-    public int getAirspaceCapacity() {
+    public int getAirspaceSize() {
         return airspace.size();
+    }
+
+    /**
+     * Getter method for if the airspace is empty
+     *
+     * @return true/false if the airspace is empty
+     */
+    @Override
+    public boolean isAirspaceEmpty() {
+        return airspace.isEmpty();
     }
 }

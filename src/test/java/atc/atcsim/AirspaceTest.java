@@ -20,7 +20,10 @@ public class AirspaceTest {
     @BeforeEach
     public void setUp() {
         londonHeathrow = new Airspace();
-        AI101 = new Plane("AI101", "Mid air","EK61", "B77W","A6- EQB", "Qantas", "FRA", "DXB", 7.00, 14.00, 200, 14,"taking off", "delayed");
+        AI101 = new Plane("AI101", "Mid air","EK61",
+                "B77W","A6- EQB", "Qantas",
+                "FRA", "DXB", 7.00, 14.00,
+                200, 14,"taking off", "delayed");
     }
 
     /**
@@ -28,7 +31,7 @@ public class AirspaceTest {
      */
     @Test
     public void testAddToAirspaceOpen() {
-        londonHeathrow.addToAirspace(AI101);
+        assertTrue(londonHeathrow.addToAirspace(AI101));
         assertEquals(AI101, londonHeathrow.getPlaneInAirspace(AI101));
     }
 
@@ -88,9 +91,9 @@ public class AirspaceTest {
     @Test
     public void testClearAirspace() {
         londonHeathrow.addToAirspace(AI101);
-        assertEquals(londonHeathrow.getAirspaceCapacity(), 1);
+        assertEquals(londonHeathrow.getAirspaceSize(), 1);
         londonHeathrow.clearAirspace();
-        assertEquals(londonHeathrow.getAirspaceCapacity(), 0);
+        assertEquals(londonHeathrow.getAirspaceSize(), 0);
     }
 
     /**
@@ -118,8 +121,8 @@ public class AirspaceTest {
      */
     @Test
     public void testGetAirspaceCapacity() {
-        assertEquals(londonHeathrow.getAirspaceCapacity(), 0);
+        assertEquals(londonHeathrow.getAirspaceSize(), 0);
         londonHeathrow.addToAirspace(AI101);
-        assertEquals(londonHeathrow.getAirspaceCapacity(), 1);
+        assertEquals(londonHeathrow.getAirspaceSize(), 1);
     }
 }

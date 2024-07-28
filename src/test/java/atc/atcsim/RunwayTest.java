@@ -39,6 +39,7 @@ public class RunwayTest {
     @Test
     public void testAddToTakeoffQueue() {
         assertTrue(L27.addToTakeoffQueue(AI101));
+        assertTrue(L27.getTakeoffQueue(AI101));
     }
 
     /**
@@ -47,6 +48,7 @@ public class RunwayTest {
     @Test
     public void testAddToTakeoffQueueAlreadyExists() {
         assertTrue(L27.addToTakeoffQueue(AI101));
+        assertTrue(L27.getTakeoffQueue(AI101));
         assertFalse(L27.addToTakeoffQueue(AI101));
     }
 
@@ -98,7 +100,9 @@ public class RunwayTest {
     @Test
     public void testRemoveFromTakeoffQueue() {
         L27.addToTakeoffQueue(AI101);
+        assertTrue(L27.getTakeoffQueue(AI101));
         assertTrue(L27.removeFromTakeoffQueue(AI101));
+        assertFalse(L27.getTakeoffQueue(AI101));
     }
 
     /**
@@ -115,7 +119,9 @@ public class RunwayTest {
     @Test
     public void testRemoveFromTakeoffQueueNoParam() {
         L27.addToTakeoffQueue(AI101);
+        assertTrue(L27.getTakeoffQueue(AI101));
         assertTrue(L27.removeFromTakeoffQueue());
+        assertNull(L27.getTakeoffQueue());
     }
 
     /**
@@ -124,7 +130,9 @@ public class RunwayTest {
     @Test
     public void testGetTakeoffQueueSize() {
         assertEquals(L27.getTakeoffQueueSize(), 0);
+        assertNull(L27.getTakeoffQueue());
         L27.addToTakeoffQueue(AI101);
+        assertTrue(L27.getTakeoffQueue(AI101));
         assertEquals(L27.getTakeoffQueueSize(), 1);
     }
 
@@ -134,7 +142,9 @@ public class RunwayTest {
     @Test
     public void testClearForTakeoff() {
         L27.addToTakeoffQueue(AI101);
+        assertTrue(L27.getTakeoffQueue(AI101));
         L27.clearForTakeoff(AI101);
+        assertNull(L27.getTakeoffQueue());
         assertEquals(AI101, jfk.getPlaneInAirspace(AI101));
     }
 
@@ -145,7 +155,9 @@ public class RunwayTest {
     public void testClearForTakeoffRunwayClosed() {
         L27.closeRunway();
         L27.addToTakeoffQueue(AI101);
+        assertTrue(L27.getTakeoffQueue(AI101));
         assertFalse(L27.clearForTakeoff(AI101));
+        assertTrue(L27.getTakeoffQueue(AI101));
     }
 
     /**
@@ -154,6 +166,7 @@ public class RunwayTest {
     @Test
     public void testAddToLandingQueue() {
         assertTrue(L27.addToLandingQueue(AI101));
+        assertTrue(L27.getLandingQueue(AI101));
     }
 
     /**
@@ -162,6 +175,7 @@ public class RunwayTest {
     @Test
     public void testAddToLandingQueueAlreadyExists() {
         L27.addToLandingQueue(AI101);
+        assertTrue(L27.getLandingQueue(AI101));
         assertFalse(L27.addToLandingQueue(AI101));
     }
 
@@ -171,7 +185,9 @@ public class RunwayTest {
     @Test
     public void testGetLandingQueueSize() {
         assertEquals(L27.getLandingQueueSize(), 0);
+        assertNull(L27.getLandingQueue());
         L27.addToLandingQueue(AI101);
+        assertTrue(L27.getLandingQueue(AI101));
         assertEquals(L27.getLandingQueueSize(), 1);
     }
 
@@ -189,7 +205,9 @@ public class RunwayTest {
     @Test
     public void testRemoveFromLandingQueue() {
         L27.addToLandingQueue(AI101);
+        assertTrue(L27.getLandingQueue(AI101));
         assertTrue(L27.removeFromLandingQueue(AI101));
+        assertNull(L27.getLandingQueue());
     }
 
     /**
@@ -198,7 +216,9 @@ public class RunwayTest {
     @Test
     public void testRemoveFromLandingQueueNoParam() {
         L27.addToLandingQueue(AI101);
+        assertTrue(L27.getLandingQueue(AI101));
         assertTrue(L27.removeFromLandingQueue());
+        assertNull(L27.getLandingQueue());
     }
 
     /**
@@ -250,7 +270,9 @@ public class RunwayTest {
     public void testClearForLanding() {
         jfk.addToAirspace(AI101);
         L27.addToLandingQueue(AI101);
+        assertTrue(L27.getLandingQueue(AI101));
         assertTrue(L27.clearForLanding(AI101));
+        assertNull(L27.getLandingQueue());
     }
 
     /**
@@ -260,8 +282,10 @@ public class RunwayTest {
     public void testClearForLandingRunwayClosed() {
         jfk.addToAirspace(AI101);
         L27.addToLandingQueue(AI101);
+        assertTrue(L27.getLandingQueue(AI101));
         L27.closeRunway();
         assertFalse(L27.clearForLanding(AI101));
+        assertTrue(L27.getLandingQueue(AI101));
     }
 
     /**

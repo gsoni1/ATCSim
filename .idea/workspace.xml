@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56c8de2e-7eff-4de6-ad45-7e612527ec89" name="Changes" comment="Added more if conditions">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_26_2024_2_01_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_26_2024_2_01_PM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atc/atcsim/Terminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atc/atcsim/Terminal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atc/atcsim/AirSpaces.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atc/atcsim/AirSpaces.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atc/atcsim/Airspace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atc/atcsim/Airspace.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/atc/atcsim/AirspaceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/atc/atcsim/AirspaceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/atc/atcsim/RunwayTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/atc/atcsim/RunwayTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,34 +72,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.ATCSim [:HelloApplication.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ATCSim [build].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ATCSim [test].executor&quot;: &quot;Coverage&quot;,
-    &quot;Gradle.ATCSim.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ATCsim [:HelloApplication.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ATCsim [build].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ATCsim [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ATCsim [publish].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ATCsim [test].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.AirspaceTest.executor&quot;: &quot;Coverage&quot;,
-    &quot;Gradle.AirspaceTest.testAddToAirspace2.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.AirspaceTest.testGetPlaneInAirspace.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.AirspaceTest.testGetPlaneInAirspace2.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.AirspaceTest.testRemoveFromAirspace2.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.RunwayTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.RunwayTest.testAddToTakeoffQueue.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.RunwayTest.testClearForTakeoff.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Upgrade Gradle wrapper.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Program Files (x86)/Oracle/JavaFX Scene Builder 2.0/JavaFX Scene Builder 2.0.exe&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.ATCSim [:HelloApplication.main()].executor": "Run",
+    "Gradle.ATCSim [build].executor": "Run",
+    "Gradle.ATCSim [test].executor": "Coverage",
+    "Gradle.ATCSim.executor": "Run",
+    "Gradle.ATCsim [:HelloApplication.main()].executor": "Run",
+    "Gradle.ATCsim [build].executor": "Run",
+    "Gradle.ATCsim [clean].executor": "Run",
+    "Gradle.ATCsim [publish].executor": "Run",
+    "Gradle.ATCsim [test].executor": "Run",
+    "Gradle.AirspaceTest.executor": "Run",
+    "Gradle.AirspaceTest.testAddToAirspace2.executor": "Run",
+    "Gradle.AirspaceTest.testGetPlaneInAirspace.executor": "Run",
+    "Gradle.AirspaceTest.testGetPlaneInAirspace2.executor": "Run",
+    "Gradle.AirspaceTest.testRemoveFromAirspace2.executor": "Run",
+    "Gradle.RunwayTest.executor": "Coverage",
+    "Gradle.RunwayTest.testAddToTakeoffQueue.executor": "Run",
+    "Gradle.RunwayTest.testClearForTakeoff.executor": "Run",
+    "Gradle.Upgrade Gradle wrapper.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Program Files (x86)/Oracle/JavaFX Scene Builder 2.0/JavaFX Scene Builder 2.0.exe"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -114,7 +119,7 @@
       <command value="gradle test" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.ATCSim [test]">
+  <component name="RunManager">
     <configuration name="ATCSim [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -362,7 +367,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ATCsim$ATCSim__test_.ic" NAME="ATCSim [test] Coverage Results" MODIFIED="1721406127898" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
-    <SUITE FILE_PATH="coverage/ATCsim$RunwayTest.ic" NAME="RunwayTest Coverage Results" MODIFIED="1721316352690" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
-    <SUITE FILE_PATH="coverage/ATCsim$AirspaceTest.ic" NAME="AirspaceTest Coverage Results" MODIFIED="1721316293430" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/ATCsim$RunwayTest.ic" NAME="RunwayTest Coverage Results" MODIFIED="1722196112162" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/ATCsim$AirspaceTest.ic" NAME="AirspaceTest Coverage Results" MODIFIED="1722190454690" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>
