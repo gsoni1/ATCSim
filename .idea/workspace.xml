@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56c8de2e-7eff-4de6-ad45-7e612527ec89" name="Changes" comment="Added more if conditions">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_26_2024_2_01_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_26_2024_2_01_PM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atc/atcsim/AirSpaces.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atc/atcsim/AirSpaces.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atc/atcsim/Airspace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atc/atcsim/Airspace.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/atc/atcsim/AirspaceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/atc/atcsim/AirspaceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/atc/atcsim/RunwayTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/atc/atcsim/RunwayTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +78,7 @@
     "Gradle.ATCsim [clean].executor": "Run",
     "Gradle.ATCsim [publish].executor": "Run",
     "Gradle.ATCsim [test].executor": "Run",
-    "Gradle.AirspaceTest.executor": "Run",
+    "Gradle.AirspaceTest.executor": "Coverage",
     "Gradle.AirspaceTest.testAddToAirspace2.executor": "Run",
     "Gradle.AirspaceTest.testGetPlaneInAirspace.executor": "Run",
     "Gradle.AirspaceTest.testGetPlaneInAirspace2.executor": "Run",
@@ -368,6 +363,6 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ATCsim$ATCSim__test_.ic" NAME="ATCSim [test] Coverage Results" MODIFIED="1721406127898" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/ATCsim$RunwayTest.ic" NAME="RunwayTest Coverage Results" MODIFIED="1722196112162" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
-    <SUITE FILE_PATH="coverage/ATCsim$AirspaceTest.ic" NAME="AirspaceTest Coverage Results" MODIFIED="1722190454690" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/ATCsim$AirspaceTest.ic" NAME="AirspaceTest Coverage Results" MODIFIED="1722267666460" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>

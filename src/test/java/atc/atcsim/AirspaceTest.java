@@ -1,6 +1,4 @@
 package atc.atcsim;
-
-import atc.atcsim.*;
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -41,8 +39,9 @@ public class AirspaceTest {
     @Test
     public void testAddToAirspaceClosed() {
         londonHeathrow.closeAirspace();
-        londonHeathrow.addToAirspace(AI101);
-        assertNotEquals(AI101, londonHeathrow.getPlaneInAirspace(AI101));
+        assertFalse(londonHeathrow.getAirspaceClearance());
+        assertFalse(londonHeathrow.addToAirspace(AI101));
+        assertNull(londonHeathrow.getPlaneInAirspace(AI101));
     }
 
     /**
@@ -53,7 +52,7 @@ public class AirspaceTest {
     public void testRemoveFromAirspaceExists() {
         londonHeathrow.addToAirspace(AI101);
         assertEquals(AI101, londonHeathrow.getPlaneInAirspace(AI101));
-        londonHeathrow.removeFromAirspace(AI101);
+        assertTrue(londonHeathrow.removeFromAirspace(AI101));
         assertNotEquals(AI101, londonHeathrow.getPlaneInAirspace(AI101));
     }
 
@@ -63,9 +62,7 @@ public class AirspaceTest {
      */
     @Test
     public void testRemoveFromAirspaceDoesNotExist() {
-        londonHeathrow.removeFromAirspace(AI101);
-        assertNotEquals(AI101, londonHeathrow.getPlaneInAirspace(AI101));
-        assertNull(londonHeathrow.getPlaneInAirspace(AI101));
+        assertFalse(londonHeathrow.removeFromAirspace(AI101));
     }
 
     /**
@@ -86,14 +83,13 @@ public class AirspaceTest {
     }
 
     /**
-     * Tests the clearAirspace method using a single plane in the airspace.
+     * Tests the closeAirspace method by closing the airspace
      */
     @Test
-    public void testClearAirspace() {
-        londonHeathrow.addToAirspace(AI101);
-        assertEquals(londonHeathrow.getAirspaceSize(), 1);
-        londonHeathrow.clearAirspace();
-        assertEquals(londonHeathrow.getAirspaceSize(), 0);
+    public void testCloseAirspace() {
+        assertTrue(londonHeathrow.getAirspaceClearance());
+        londonHeathrow.closeAirspace();
+        assertFalse(londonHeathrow.getAirspaceClearance());
     }
 
     /**
@@ -108,21 +104,59 @@ public class AirspaceTest {
         assertTrue(londonHeathrow.getAirspaceClearance());
     }
 
-    /**
-     * Tests the closeAirspace method by closing the airspace
-     */
-    public void testCloseAirspace() {
+    @Test
+    public void testGetAirspaceClearance() {
+        assertTrue(londonHeathrow.getAirspaceClearance());
         londonHeathrow.closeAirspace();
         assertFalse(londonHeathrow.getAirspaceClearance());
     }
 
     /**
-     * Tests the getAirspaceCapacity method
+     * Tests the clearAirspace method using a single plane in the airspace.
      */
     @Test
-    public void testGetAirspaceCapacity() {
+    public void testClearAirspace() {
+        londonHeathrow.addToAirspace(AI101);
+        assertEquals(londonHeathrow.getAirspaceSize(), 1);
+        assertTrue(londonHeathrow.clearAirspace());
+        assertEquals(londonHeathrow.getAirspaceSize(), 0);
+    }
+
+    /**
+     * Tests the clearAirspace method using an empty airspace.
+     */
+    @Test
+    public void testClearAirspaceEmpty() {
+        assertEquals(londonHeathrow.getAirspaceSize(), 0);
+        assertFalse(londonHeathrow.clearAirspace());
+    }
+
+    /**
+     * Tests the getAirspaceSize method by adding and removing a plane
+     */
+    @Test
+    public void testGetAirspaceSize() {
         assertEquals(londonHeathrow.getAirspaceSize(), 0);
         londonHeathrow.addToAirspace(AI101);
         assertEquals(londonHeathrow.getAirspaceSize(), 1);
+        londonHeathrow.removeFromAirspace(AI101);
+        assertEquals(londonHeathrow.getAirspaceSize(), 0);
+    }
+
+    /**
+     * Tests the isAirspaceEmpty method using an empty airspace
+     */
+    @Test
+    public void testIsAirspaceEmptyTrue() {
+        assertTrue(londonHeathrow.isAirspaceEmpty());
+    }
+
+    /**
+     * Tests the isAirspaceEmpty method using an airspace with a single plane
+     */
+    @Test
+    public void testIsAirspaceEmptyFalse() {
+        londonHeathrow.addToAirspace(AI101);
+        assertFalse(londonHeathrow.isAirspaceEmpty());
     }
 }
