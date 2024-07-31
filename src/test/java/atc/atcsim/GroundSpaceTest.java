@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * @author Arihita Dirghangi
  * @version 7/31/2024
  */
-public class GroundspaceTest {
+public class GroundSpaceTest {
     // fields
     private GroundSpace londonHeathrow;
     private Plane AI101;
