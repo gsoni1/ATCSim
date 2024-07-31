@@ -16,7 +16,7 @@ public class AirlineManager {
     public AirlineManager() {
         airlineFleet = new Graph<Object>();
         fleetCount = new HashMap<String, Integer>();
-        fleetCount.put("All", 0);
+        fleetCount.put("All Aircraft", 0);
         fleetCount.put("Boeing", 0);
         fleetCount.put("Airbus", 0);
         fleetCount.put("B737", 0);
@@ -101,6 +101,8 @@ public class AirlineManager {
             airlineFleet.addVertex(p.getPlaneRegistration());
             airlineFleet.addEdge(p.getPlaneModel(), p.getPlaneRegistration(), true);
             fleetCount.replace(p.getPlaneModel(), getNumOfPlaneModel(p.getPlaneModel()) + 1);
+            fleetCount.replace("All Aircraft", getNumOfAllPlanes() + 1);
+
             return true;
         }
         return false;
@@ -110,17 +112,18 @@ public class AirlineManager {
         return airlineFleet.hasVertex(p.getPlaneRegistration());
     }
 
-    public boolean removePlaneFromFleet(String planeRegistration) {
-        if (airlineFleet.hasVertex(planeRegistration)) {
-            airlineFleet.removeVertex(planeRegistration);
+    public boolean removePlaneFromFleet(Plane p) {
+        if (airlineFleet.hasVertex(p.getPlaneRegistration())) {
+            airlineFleet.removeVertex(p.getPlaneRegistration());
             fleetCount.replace(p.getPlaneModel(), getNumOfPlaneModel(p.getPlaneModel()) - 1);
+            fleetCount.replace("All Aircraft", getNumOfAllPlanes() - 1);
             return true;
         }
         return false;
     }
 
-    public int getFleetSize() {
-        return airlineFleet.getVertexCount() - 22;
+    public int getNumOfAllPlanes() {
+        return fleetCount.get("All Aircraft");
     }
 
     public int getNumOfPlaneModel(String planeModel) {

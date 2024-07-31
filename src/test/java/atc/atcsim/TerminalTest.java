@@ -25,17 +25,17 @@ public class TerminalTest {
      * Set up method for the test class
      */
     public void setUp() {
-        AI101 = new Plane("AIC101", "Mid air",
+        AI101 = new Plane("Boeing", "AIC101", "Mid air",
                 "AI101", "B77W","A6- EQB",
                 "Qantas", "FRA", "DXB", 7.00,
                 14.00, 200, 14,"taking off",
                 "delayed");
-        AI102 = new Plane("AIC102", "Mid air",
+        AI102 = new Plane("Boeing","AIC102", "Mid air",
                 "AI102", "B77W","A6- EQB",
                 "Qantas", "FRA", "DXB", 7.00,
                 14.00, 200, 14,"taking off",
                 "delayed");
-        AI103 = new Plane("AIC103", "Mid air",
+        AI103 = new Plane("Boeing","AIC103", "Mid air",
                 "AI103", "B77W","A6- EQB",
                 "Qantas", "FRA", "DXB", 7.00,
                 14.00, 200, 14,"taking off",
