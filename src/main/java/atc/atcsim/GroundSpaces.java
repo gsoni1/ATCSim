@@ -11,12 +11,13 @@ package atc.atcsim;
 public interface GroundSpaces {
 
     // Method Declarations
-    public void addToGroundSpace(Plane p);
-    public void removeFromGroundSpace(Plane p);
+    public boolean addToGroundSpace(Plane p);
+    public boolean removeFromGroundSpace(Plane p);
     public Plane getPlaneInGroundSpace(Plane p);
     public void closeGroundSpace();
     public void openGroundSpace();
     public boolean getGroundSpaceClearance();
-    public void clearGroundSpace();
-    public int getGroundSpaceCapacity();
+    public boolean clearGroundSpace();
+    public int getGroundSpaceSize();
+    public boolean isGroundSpaceEmpty();
 }
