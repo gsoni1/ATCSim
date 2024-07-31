@@ -2,99 +2,124 @@ package atc.atcsim;
 import java.util.HashMap;
 
 /**
- * GroundSpace class, implements the GroundSpaces interface and defines all of its method, uses a hashmap to store planes in a given airspace. Provides methods to modify the contents
+ * groundspace class, implements the groundSpaces interface and defines all of its method, uses a hashmap to store planes in a given groundspace. Provides methods to modify the contents
  * of the hashmap.
  *
  * @author Arihita Dirghangi
- * @version 7/10/2024
+ * @version 7/31/2024
  */
-public class GroundSpace implements GroundSpaces{
-
-    private HashMap<String, Plane> groundSpace; // hashmap that stores all the planes
-    private boolean groundSpaceOpen;
+public class GroundSpace implements GroundSpaces {
+    // Fields
+    private HashMap<String, Plane> groundspace; // hashmap that stores all the planes
+    private boolean groundspaceOpen; // boolean to hold the status of whether the groundspace is open or not
 
     /**
-     * Create a new groundSpace Object.
+     * Create a new groundspace Object.
      */
     public GroundSpace() {
-        groundSpace =  new HashMap<String, Plane>();
-        groundSpaceOpen = true; // instantiate the airspace as open
+        groundspace =  new HashMap<String, Plane>();
+        groundspaceOpen = true; // instantiate the groundspace as open
     }
 
     /**
-     * Adds the specified plane to the groundSpace if the groundSpace is open
+     * Adds the specified plane to the groundspace if the groundspace is open
+     *
      * @param p Plane to be added
+     * @return true/false if plane was added to the groundspace
      */
     @Override
-    public void addToGroundSpace(Plane p) {
-        if (groundSpaceOpen) {
-            groundSpace.put(p.getPlaneCallSign(), p);
+    public boolean addToGroundSpace(Plane p) {
+        if (groundspaceOpen) {
+            groundspace.put(p.getPlaneCallSign(), p);
+            return true;
         }
+        return false;
     }
 
     /**
-     * Removes the specified plane from the groundSpace
+     * Removes the specified plane from the groundspace
+     *
      * @param p Plane to be removed
+     * @return true/false if plane was removed from the groundspace
      */
     @Override
-    public void removeFromGroundSpace(Plane p) {
+    public boolean removeFromGroundSpace(Plane p) {
         if (getPlaneInGroundSpace(p) != null) {
-            groundSpace.remove(p.getPlaneCallSign());
+            groundspace.remove(p.getPlaneCallSign());
+            return true;
         }
+        return false;
     }
 
     /**
-     * Getter method for the specified plane in groundSpace
-     * @param p Plane to search for in groundSpace
-     * @return Plane in the groundSpace
+     * Getter method for the specified plane in groundspace
+     *
+     * @param p Plane to search for in groundspace
+     * @return Plane in the groundspace
      */
     @Override
     public Plane getPlaneInGroundSpace(Plane p) {
-        return groundSpace.get(p.getPlaneCallSign());
+        return groundspace.get(p.getPlaneCallSign());
     }
 
     /**
-     * Closes the groundSpace by marking the groundSpaceOpen variable as false.
+     * Closes the groundspace by marking the groundspaceOpen variable as false.
      */
     @Override
     public void closeGroundSpace() {
-        groundSpaceOpen = false;
+        groundspaceOpen = false;
     }
 
     /**
-     * Opens the groundSpace by marking the groundSpaceOpen variable as true;
+     * Opens the groundspace by marking the groundspaceOpen variable as true;
      */
     @Override
     public void openGroundSpace() {
-        groundSpaceOpen = true;
+        groundspaceOpen = true;
     }
 
     /**
-     * Getter method for the groundSpace clearance
-     * @return true/false if the groundSpace is open
+     * Getter method for the groundspace clearance
+     *
+     * @return true/false if the groundspace is open
      */
     @Override
     public boolean getGroundSpaceClearance() {
-        return groundSpaceOpen;
+        return groundspaceOpen;
     }
 
     /**
-     * Clears the groundSpace by removing all objects in the groundSpace hashmap.
+     * Clears the groundspace by removing all objects in the groundspace hashmap.
+     *
+     * @return true/false if the groundspace was cleared
      */
     @Override
-    public void clearGroundSpace() {
-        groundSpace.clear();
+    public boolean clearGroundSpace() {
+        if (!groundspace.isEmpty()) {
+            groundspace.clear();
+            return true;
+        }
+        return false;
     }
 
     /**
-     * Getter method for the groundSpace capacity
-     * @return Number of planes currently in the groundSpace
+     * Getter method for the groundspace size
+     *
+     * @return Number of planes currently in the groundspace
      */
     @Override
-    public int getGroundSpaceCapacity() {
-        return groundSpace.size();
+    public int getGroundSpaceSize() {
+        return groundspace.size();
     }
 
-
-
+    /**
+     * Getter method for if the groundspace is empty
+     *
+     * @return true/false if the groundspace is empty
+     */
+    @Override
+    public boolean isGroundSpaceEmpty() {
+        return groundspace.isEmpty();
+    }
 }
+
