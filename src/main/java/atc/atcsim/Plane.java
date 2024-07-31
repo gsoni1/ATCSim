@@ -9,6 +9,7 @@ package atc.atcsim;
  * @version 7/10/2024
  */
 public class Plane {
+    private String planeManufacturer;
     private String planeModel;
     private String planeCallSign; // UAE61
     private String planeFlightNumber; // EK61
@@ -26,9 +27,10 @@ public class Plane {
 
     /**
      * Create a new Plane object.
+     * @param planeManufacturer assigned (Eg. Boeing)
      * @param planeCallSign assigned (Eg. AI101)
      * @param planeFlightStatus assigned (Eg. delayed)
-     * @param planeModel assigned
+     * @param planeModel assigned (Eg. B747)
      * @param planeFlightNumber assigned (Eg. EK61)
      * @param planeIATATypeCode assigned (Eg. B77W)
      * @param planeRegistration assigned (Eg. A6- EQB)
@@ -42,7 +44,8 @@ public class Plane {
      * @param planeStatus assigned (Eg. taking off)
      *
      */
-    public Plane(String planeCallSign, String planeFlightStatus, String planeFlightNumber, String planeIATATypeCode, String planeRegistration, String planeAirline, String planeOrigin, String planeDestination, Double planeArrivalTime, Double planeDepartureTime, int planeNumberOfPassengers, int planeFlightTime, String planeStatus, String planeModel) {
+    public Plane(String planeManufacturer, String planeCallSign, String planeFlightStatus, String planeFlightNumber, String planeIATATypeCode, String planeRegistration, String planeAirline, String planeOrigin, String planeDestination, Double planeArrivalTime, Double planeDepartureTime, int planeNumberOfPassengers, int planeFlightTime, String planeStatus, String planeModel) {
+        this.planeManufacturer = planeManufacturer;
         this.planeCallSign = planeCallSign;
         this.planeFlightStatus = planeFlightStatus;
         this.planeFlightNumber = planeFlightNumber;
@@ -74,6 +77,15 @@ public class Plane {
     public String getPlaneCallSign() {
         return planeCallSign;
     }
+
+    /**
+     * Getter method for variable planeManufacturer
+     * @return String name of the plane manufacturer called
+     */
+    public String getPlaneManufacturer() {
+        return planeManufacturer;
+    }
+
     /**
      * Getter method for variable planeModel
      * @return Plane Model type
@@ -190,6 +202,15 @@ public class Plane {
     public void setPlaneModel(String p)
     {
         planeModel = p;
+    }
+
+    /**
+     * Setter method for variable planeManufacturer
+     * @param manufacturer is the string name to be set for the planeManufacturer
+     */
+    public void setPlaneManufacturer(String manufacturer)
+    {
+        planeManufacturer = manufacturer;
     }
 
     /**

@@ -21,16 +21,16 @@ public class RunwayTest {
         jfk = new Airspace();
         jfkGround = new GroundSpace();
         L27 = new Runway("twenty seven left", jfk, jfkGround);
-        AI101 = new Plane("AIC101", "Mid air",
+        AI101 = new Plane("Boeing", "AIC101", "Mid air",
                 "AI101", "B77W","A6- EQB",
                 "Qantas", "FRA", "DXB", 7.00,
                 14.00, 200, 14,"taking off",
-                "delayed");
-        AI102 = new Plane("AIC102", "Mid air",
+                "747");
+        AI102 = new Plane("Boeing", "AIC102", "Mid air",
                 "AI102", "B77W","A6- EQB",
                 "Qantas", "FRA", "DXB", 7.00,
                 14.00, 200, 14,"taking off",
-                "delayed");
+                "757");
     }
 
     /**
