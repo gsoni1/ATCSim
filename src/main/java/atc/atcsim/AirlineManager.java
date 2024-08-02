@@ -40,9 +40,6 @@ public class AirlineManager {
         fleetCount.put("A350", 0);
         fleetCount.put("A380", 0);
 
-        // TODO: add some data structure to track the fleet, instant retrieval of number of aircraft per model,
-        //  manufacturer, etc
-
         // Add manufacturers
         airlineFleet.addVertex("Boeing");
         airlineFleet.addVertex("Airbus");
@@ -98,25 +95,31 @@ public class AirlineManager {
 
     public boolean addPlaneToFleet(Plane p) {
         if (!doesPlaneExistInFleet(p)) {
-            airlineFleet.addVertex(p.getPlaneRegistration());
-            airlineFleet.addEdge(p.getPlaneModel(), p.getPlaneRegistration(), true);
-            fleetCount.replace(p.getPlaneModel(), getNumOfPlaneModel(p.getPlaneModel()) + 1);
-            fleetCount.replace("All Aircraft", getNumOfAllPlanes() + 1);
-
+//            airlineFleet.addVertex(p.getPlaneRegistration());
+            airlineFleet.addVertex(p);
+            airlineFleet.addEdge(p.getPlaneModel(), p, true);
+            fleetCount.replace(p.getPlaneModel(), getNumOfPlaneModel(p.getPlaneModel()) + 1); // increment the count for the plane model
+            fleetCount.replace("All Aircraft", getNumOfAllPlanes() + 1); // increment the count for all planes
+            fleetCount.replace(p.getPlaneManufacturer(), getNumOfPlaneManufacturer(p.getPlaneManufacturer()) + 1); // increment the count for the plane manufacturer
             return true;
         }
         return false;
     }
 
     public boolean doesPlaneExistInFleet(Plane p) {
-        return airlineFleet.hasVertex(p.getPlaneRegistration());
+        return airlineFleet.hasVertex(p);
     }
 
+//    public Object getPlaneInFleet(Plane p) {
+//        return airlineFleet.getVertex(p);
+//    }
+
     public boolean removePlaneFromFleet(Plane p) {
-        if (airlineFleet.hasVertex(p.getPlaneRegistration())) {
-            airlineFleet.removeVertex(p.getPlaneRegistration());
-            fleetCount.replace(p.getPlaneModel(), getNumOfPlaneModel(p.getPlaneModel()) - 1);
-            fleetCount.replace("All Aircraft", getNumOfAllPlanes() - 1);
+        if (airlineFleet.hasVertex(p)) {
+            airlineFleet.removeVertex(p);
+            fleetCount.replace(p.getPlaneModel(), getNumOfPlaneModel(p.getPlaneModel()) - 1); // decrement the count for the plane model
+            fleetCount.replace("All Aircraft", getNumOfAllPlanes() - 1); // decrement the count for all planes
+            fleetCount.replace(p.getPlaneManufacturer(), getNumOfPlaneManufacturer(p.getPlaneManufacturer()) - 1); // decrement the count for the plane manufacturer
             return true;
         }
         return false;
@@ -128,6 +131,22 @@ public class AirlineManager {
 
     public int getNumOfPlaneModel(String planeModel) {
         return fleetCount.get(planeModel);
+    }
+
+    public int getNumOfPlaneManufacturer(String planeManufacturer) {
+        return fleetCount.get(planeManufacturer);
+    }
+
+    public boolean clearFleet() {
+        for
+        fleetCount.replace(p.getPlaneModel(), 0);
+        fleetCount.replace("All Aircraft", 0);
+        fleetCount.replace(p.getPlaneManufacturer(), 0);
+        return airlineFleet.clearGraph();
+    }
+
+    public boolean isFleetEmpty() {
+        return getNumOfAllPlanes() == 0;
     }
 }
 
@@ -160,19 +179,42 @@ class Graph<T> {
             addVertex(destination);
 
         map.get(source).add(destination);
-        if (bidirectional == true) {
+        if (bidirectional) {
             map.get(destination).add(source);
         }
     }
 
-    public void removeVertex(T s) {
-        map.remove(s);
+    public boolean removeVertex(T s) {
+        if (hasVertex(s)) {
+            map.remove(s);
+            return true;
+        }
+        return false;
     }
 
-    // This function gives the count of vertices
-    public int getVertexCount()
-    {
-        return map.keySet().size();
+    public Object getVertex(T s) {
+        return map.get(s);
+    }
+
+//    // This function gives the count of vertices
+//    public int getVertexCount()
+//    {
+//        return map.keySet().size();
+//    }
+
+    public boolean clearGraph() {
+        if (!map.isEmpty()) {
+            map.clear();
+            return true;
+        }
+        return false;
+    }
+
+    public boolean isGraphEmpty() {
+        if (map.isEmpty()) {
+            return true;
+        }
+        return false;
     }
 
 //    // This function gives the count of edges
@@ -196,44 +238,44 @@ class Graph<T> {
         return map.containsKey(s);
     }
 
-    // This function gives whether an edge is present or
-    // not.
-    public void hasEdge(T s, T d)
-    {
-        if (map.get(s).contains(d)) {
-            System.out.println(
-                    "The graph has an edge between " + s
-                            + " and " + d + ".");
-        }
-        else {
-            System.out.println(
-                    "The graph has no edge between " + s
-                            + " and " + d + ".");
-        }
-    }
+//    // This function gives whether an edge is present or
+//    // not.
+//    public void hasEdge(T s, T d)
+//    {
+//        if (map.get(s).contains(d)) {
+//            System.out.println(
+//                    "The graph has an edge between " + s
+//                            + " and " + d + ".");
+//        }
+//        else {
+//            System.out.println(
+//                    "The graph has no edge between " + s
+//                            + " and " + d + ".");
+//        }
+//    }
 
-    public void neighbours(T s)
-    {
-        if(!map.containsKey(s))
-            return ;
-        System.out.println("The neighbours of "+s+" are");
-        for(T w:map.get(s))
-            System.out.print(w+",");
-    }
+//    public void neighbours(T s)
+//    {
+//        if(!map.containsKey(s))
+//            return ;
+//        System.out.println("The neighbours of "+s+" are");
+//        for(T w:map.get(s))
+//            System.out.print(w+",");
+//    }
 
-    // Prints the adjancency list of each vertex.
-    @Override public String toString()
-    {
-        StringBuilder builder = new StringBuilder();
-
-        for (T v : map.keySet()) {
-            builder.append(v.toString() + ": ");
-            for (T w : map.get(v)) {
-                builder.append(w.toString() + " ");
-            }
-            builder.append("\n");
-        }
-
-        return (builder.toString());
-    }
+//    // Prints the adjancency list of each vertex.
+//    @Override public String toString()
+//    {
+//        StringBuilder builder = new StringBuilder();
+//
+//        for (T v : map.keySet()) {
+//            builder.append(v.toString() + ": ");
+//            for (T w : map.get(v)) {
+//                builder.append(w.toString() + " ");
+//            }
+//            builder.append("\n");
+//        }
+//
+//        return (builder.toString());
+//    }
 }
