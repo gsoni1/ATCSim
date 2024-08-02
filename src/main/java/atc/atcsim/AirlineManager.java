@@ -137,13 +137,13 @@ public class AirlineManager {
         return fleetCount.get(planeManufacturer);
     }
 
-    public boolean clearFleet() {
-        for
-        fleetCount.replace(p.getPlaneModel(), 0);
-        fleetCount.replace("All Aircraft", 0);
-        fleetCount.replace(p.getPlaneManufacturer(), 0);
-        return airlineFleet.clearGraph();
-    }
+//    public boolean clearFleet() {
+//    for
+//        fleetCount.replace(p.getPlaneModel(), 0);
+//        fleetCount.replace("All Aircraft", 0);
+//        fleetCount.replace(p.getPlaneManufacturer(), 0);
+//        return airlineFleet.clearGraph();
+//    }
 
     public boolean isFleetEmpty() {
         return getNumOfAllPlanes() == 0;
