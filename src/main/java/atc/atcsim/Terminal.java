@@ -36,7 +36,7 @@ public class Terminal {
      */
     public boolean addGate(String gateName, Plane p)
     {
-        if(!containsGate(gateName)) {
+        if(!containsGate(gateName) && !containsPlane(p)) {
             gates.put(gateName, p);
             return true;
         }
@@ -68,4 +68,21 @@ public class Terminal {
     }
 
     //TODO: write a method that checks if a plane object already exists in the hashmap, if it does, we cannot add that gate
+
+    /**
+     * Method to check whether the same value has been repeated in the Hashmap
+     * @param p is the Plane Object being searched for
+     * @return boolean indicating whether plane is in the hashmap
+     */
+    public boolean containsPlane(Plane p){
+        for(Plane i : gates.values())
+        {
+            if (p.equals(i))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
 }
