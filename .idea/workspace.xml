@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56c8de2e-7eff-4de6-ad45-7e612527ec89" name="Changes" comment="begin testing for plane class">
+    <list default="true" id="56c8de2e-7eff-4de6-ad45-7e612527ec89" name="Changes" comment="Plane Class test methods Complete">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/atc/atcsim/PlaneTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/atc/atcsim/PlaneTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atc/atcsim/Terminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atc/atcsim/Terminal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/atc/atcsim/TerminalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/atc/atcsim/TerminalTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,38 +88,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.ATCSim [:HelloApplication.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ATCSim [build].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ATCSim [test].executor&quot;: &quot;Coverage&quot;,
-    &quot;Gradle.ATCSim.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ATCsim [:HelloApplication.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ATCsim [build].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ATCsim [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ATCsim [publish].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ATCsim [test].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.AirlineManagerTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.AirspaceTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.AirspaceTest.testAddToAirspace2.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.AirspaceTest.testGetPlaneInAirspace.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.AirspaceTest.testGetPlaneInAirspace2.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.AirspaceTest.testRemoveFromAirspace2.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.GroundSpaceTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.PlaneTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.RunwayTest.executor&quot;: &quot;Coverage&quot;,
-    &quot;Gradle.RunwayTest.testAddToTakeoffQueue.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.RunwayTest.testClearForTakeoff.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Upgrade Gradle wrapper.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Program Files (x86)/Oracle/JavaFX Scene Builder 2.0/JavaFX Scene Builder 2.0.exe&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.ATCSim [:HelloApplication.main()].executor": "Run",
+    "Gradle.ATCSim [build].executor": "Run",
+    "Gradle.ATCSim [test].executor": "Coverage",
+    "Gradle.ATCSim.executor": "Run",
+    "Gradle.ATCsim [:HelloApplication.main()].executor": "Run",
+    "Gradle.ATCsim [build].executor": "Run",
+    "Gradle.ATCsim [clean].executor": "Run",
+    "Gradle.ATCsim [publish].executor": "Run",
+    "Gradle.ATCsim [test].executor": "Run",
+    "Gradle.AirlineManagerTest.executor": "Run",
+    "Gradle.AirspaceTest.executor": "Run",
+    "Gradle.AirspaceTest.testAddToAirspace2.executor": "Run",
+    "Gradle.AirspaceTest.testGetPlaneInAirspace.executor": "Run",
+    "Gradle.AirspaceTest.testGetPlaneInAirspace2.executor": "Run",
+    "Gradle.AirspaceTest.testRemoveFromAirspace2.executor": "Run",
+    "Gradle.GroundSpaceTest.executor": "Run",
+    "Gradle.PlaneTest.executor": "Run",
+    "Gradle.RunwayTest.executor": "Coverage",
+    "Gradle.RunwayTest.testAddToTakeoffQueue.executor": "Run",
+    "Gradle.RunwayTest.testClearForTakeoff.executor": "Run",
+    "Gradle.TerminalTest.executor": "Run",
+    "Gradle.TerminalTest.testAddGate.executor": "Run",
+    "Gradle.TerminalTest.testAddGateAlreadyExists.executor": "Run",
+    "Gradle.TerminalTest.testContainsGateDoesNotExist.executor": "Run",
+    "Gradle.TerminalTest.testGetPlane.executor": "Run",
+    "Gradle.TerminalTest.testRemoveGate.executor": "Run",
+    "Gradle.TerminalTest.testRemoveGateDoesNotExist.executor": "Run",
+    "Gradle.Upgrade Gradle wrapper.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Program Files (x86)/Oracle/JavaFX Scene Builder 2.0/JavaFX Scene Builder 2.0.exe",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -139,95 +147,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="ATCSim [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="build" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="ATCSim [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="ATCsim [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="build" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="ATCsim [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="AirspaceTest.testAddToAirspace2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TerminalTest.testAddGate" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -240,7 +160,103 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;atc.atcsim.AirspaceTest.testAddToAirspace2&quot;" />
+            <option value="&quot;atc.atcsim.TerminalTest.testAddGate&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="TerminalTest.testAddGateAlreadyExists" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;atc.atcsim.TerminalTest.testAddGateAlreadyExists&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="TerminalTest.testContainsGateDoesNotExist" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;atc.atcsim.TerminalTest.testContainsGateDoesNotExist&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="TerminalTest.testRemoveGate" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;atc.atcsim.TerminalTest.testRemoveGate&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="TerminalTest.testRemoveGateDoesNotExist" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;atc.atcsim.TerminalTest.testRemoveGateDoesNotExist&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -253,11 +269,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.ATCSim [build]" />
-        <item itemvalue="Gradle.AirspaceTest.testAddToAirspace2" />
-        <item itemvalue="Gradle.ATCsim [build]" />
-        <item itemvalue="Gradle.ATCsim [test]" />
-        <item itemvalue="Gradle.ATCSim [test]" />
+        <item itemvalue="Gradle.TerminalTest.testContainsGateDoesNotExist" />
+        <item itemvalue="Gradle.TerminalTest.testRemoveGateDoesNotExist" />
+        <item itemvalue="Gradle.TerminalTest.testRemoveGate" />
+        <item itemvalue="Gradle.TerminalTest.testAddGateAlreadyExists" />
+        <item itemvalue="Gradle.TerminalTest.testAddGate" />
       </list>
     </recent_temporary>
   </component>
@@ -374,7 +390,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722702947411</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Plane Class test methods Complete">
+      <option name="closed" value="true" />
+      <created>1722705646266</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1722705646266</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -399,7 +423,8 @@
     <MESSAGE value="Added more conditions" />
     <MESSAGE value="Added more if conditions" />
     <MESSAGE value="begin testing for plane class" />
-    <option name="LAST_COMMIT_MESSAGE" value="begin testing for plane class" />
+    <MESSAGE value="Plane Class test methods Complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="Plane Class test methods Complete" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ATCsim$ATCSim__test_.ic" NAME="ATCSim [test] Coverage Results" MODIFIED="1721406127898" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />

@@ -64,10 +64,8 @@ public class Terminal {
      */
     public boolean containsGate(String gateName)
     {
-        if (gates.containsKey(gateName))
-        {
-            return true;
-        }
-        return false;
+        return gates.containsKey(gateName);
     }
+
+    //TODO: write a method that checks if a plane object already exists in the hashmap, if it does, we cannot add that gate
 }
