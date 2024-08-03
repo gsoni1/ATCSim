@@ -178,9 +178,89 @@ public class PlaneTest {
     @Test
     public void testSetPlaneFlightNumber() {
         AI101.setPlaneFlightNumber("EK237");
-        assertEquals(AI101.getPlaneFlightNumber("EK237"), "EK237");
+        assertEquals(AI101.getPlaneFlightNumber(), "EK237");
+    }
+
+    /**
+     * Test the setPlaneIATATypeCode() setter method
+     */
+    @Test
+    public void testSetPlaneIATATypeCode() {
+        AI101.setPlaneIATATypeCode("B78W");
+        assertEquals(AI101.getPlaneIATATypeCode(), "B78W");
+    }
+
+    /**
+     * Test the setPlaneRegistration() setter method
+     */
+    @Test
+    public void testSetPlaneRegistration() {
+        AI101.setPlaneRegistration("A7- EQB");
+        assertEquals(AI101.getPlaneRegistration(), "A7- EQB");
+    }
+
+    /**
+     * Test the setPlaneAirline() setter method
+     */
+    @Test
+    public void testSetPlaneAirline() {
+        AI101.setPlaneAirline("Emirates");
+        assertEquals(AI101.getPlaneAirline(), "Emirates");
+    }
+
+    /**
+     * Test the setPlaneOrigin() setter method
+     */
+    @Test
+    public void testSetPlaneOrigin() {
+        AI101.setPlaneOrigin("DXB");
+        assertEquals(AI101.getPlaneOrigin(), "DXB");
+    }
+
+    /**
+     * Test the setPlaneDestination() setter method
+     */
+    @Test
+    public void testSetPlaneDestination() {
+        AI101.setPlaneDestination("HK");
+        assertEquals(AI101.getPlaneDestination(), "HK");
+    }
+
+    /**
+     * Test the setPlaneArrivalTime() setter method
+     */
+    @Test
+    public void testSetPlaneArrivalTime() {
+        AI101.setPlaneArrivalTime(1.00);
+        assertEquals(AI101.getPlaneArrivalTime(), 1.00);
+    }
+
+    /**
+     * Test the setPlaneNumberOfPassengers() setter method
+     */
+    @Test
+    public void testSetPlaneNumberOfPassengers() {
+        AI101.setPlaneNumberOfPassengers(300);
+        assertEquals(AI101.getPlaneNumberOfPassengers(), 300);
+    }
+
+    /**
+     * Test the setPlaneFlightTime() setter method
+     */
+    @Test
+    public void testSetPlaneFlightTime() {
+        AI101.setPlaneFlightTime(8);
+        assertEquals(AI101.getPlaneFlightTime(), 8);
+    }
+
+    /**
+     * Test the setPlaneFlightStatus() setter method
+     */
+    @Test
+    public void testSetPlaneFlightStatus() {
+        AI101.setPlaneFlightStatus("Landing");
+        assertEquals(AI101.getPlaneFlightStatus(), "Landing");
     }
 
 
-    
 }
