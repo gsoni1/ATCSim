@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56c8de2e-7eff-4de6-ad45-7e612527ec89" name="Changes" comment="Added more if conditions">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_18_2024_12_11_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_18_2024_12_11_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_19_2024_2_39_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_19_2024_2_39_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_26_2024_2_01_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_26_2024_2_01_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="56c8de2e-7eff-4de6-ad45-7e612527ec89" name="Changes" comment="begin testing for plane class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atc/atcsim/AirlineManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atc/atcsim/AirlineManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/atc/atcsim/AirlineManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/atc/atcsim/AirlineManagerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/atc/atcsim/PlaneTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/atc/atcsim/PlaneTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -355,7 +346,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721926121425</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="begin testing for plane class">
+      <option name="closed" value="true" />
+      <created>1722642308624</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1722642308624</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -379,7 +378,8 @@
     <MESSAGE value="Terminal class rewritten with Hashmaps" />
     <MESSAGE value="Added more conditions" />
     <MESSAGE value="Added more if conditions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added more if conditions" />
+    <MESSAGE value="begin testing for plane class" />
+    <option name="LAST_COMMIT_MESSAGE" value="begin testing for plane class" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ATCsim$ATCSim__test_.ic" NAME="ATCSim [test] Coverage Results" MODIFIED="1721406127898" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
