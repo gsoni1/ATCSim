@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Test class for the groundspace class
- * @author Arihita Dirghangi
+ * @author Gautam Soni
  * @version 7/31/2024
  */
 public class GroundSpaceTest {

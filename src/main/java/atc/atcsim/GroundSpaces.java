@@ -4,7 +4,7 @@ package atc.atcsim;
  *
  * GroundSpaces interface, declares all the methods for the GroundSpace class.
  *
- * @author Arihita Dirghangi
+ * @author Gautam Soni
  * @version 7/10/2024
  * */
 

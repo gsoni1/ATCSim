@@ -5,7 +5,7 @@ import java.util.HashMap;
  * groundspace class, implements the groundSpaces interface and defines all of its method, uses a hashmap to store planes in a given groundspace. Provides methods to modify the contents
  * of the hashmap.
  *
- * @author Arihita Dirghangi
+ * @author Gautam Soni
  * @version 7/31/2024
  */
 public class GroundSpace implements GroundSpaces {
