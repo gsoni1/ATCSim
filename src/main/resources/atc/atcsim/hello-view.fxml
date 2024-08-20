@@ -16,34 +16,17 @@
   <tabs>
     <Tab text="ATCController">
       <content>
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+        <AnchorPane fx:id="groundspacelist" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
-                  <Accordion layoutX="100.0" layoutY="125.0">
-                    <panes>
-                      <TitledPane animated="false" text="untitled 1">
-                        <content>
-                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                        </content>
-                      </TitledPane>
-                      <TitledPane animated="false" text="untitled 2">
-                        <content>
-                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                        </content>
-                      </TitledPane>
-                      <TitledPane animated="false" text="untitled 3">
-                        <content>
-                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                        </content>
-                      </TitledPane>
-                    </panes>
-                  </Accordion>
+                  <ListView fx:id="groundspacelistview" editable="true" layoutX="10.0" layoutY="30.0" prefHeight="200.0" prefWidth="200.0" />
+                  <Label fx:id="groundspacelabel" layoutX="53.0" layoutY="-1.0" text="Groundspace">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="952.0" layoutY="105.0" mnemonicParsing="false" text="Button" />
                </children>
             </AnchorPane>
-      </content>
-    </Tab>
-    <Tab text="Flight Information Display">
-      <content>
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
       </content>
     </Tab>
   </tabs>

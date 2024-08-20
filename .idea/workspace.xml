@@ -5,12 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56c8de2e-7eff-4de6-ad45-7e612527ec89" name="Changes" comment="Terminal Class and Test Class completed">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/atc/atcsim/GUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atc/atcsim/GroundSpace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atc/atcsim/GroundSpace.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atc/atcsim/GroundSpaces.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atc/atcsim/GroundSpaces.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/atc/atcsim/GroundSpaceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/atc/atcsim/GroundSpaceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atc/atcsim/AtcControllerGUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atc/atcsim/HelloApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atc/atcsim/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/atc/atcsim/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/atc/atcsim/hello-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,6 +88,7 @@
     &quot;Gradle.ATCSim [build].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.ATCSim [test].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.ATCSim.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ATCsim [:GUI.main()].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.ATCsim [:HelloApplication.main()].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.ATCsim [build].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.ATCsim [clean].executor&quot;: &quot;Run&quot;,
@@ -142,7 +144,7 @@
       <command value="gradle test" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.ATCSim [test]">
+  <component name="RunManager">
     <configuration name="ATCSim [buil]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -431,6 +433,6 @@
     <SUITE FILE_PATH="coverage/ATCsim$AirlineManagerTest.ic" NAME="AirlineManagerTest Coverage Results" MODIFIED="1722528339627" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/ATCsim$RunwayTest.ic" NAME="RunwayTest Coverage Results" MODIFIED="1722268180068" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/ATCsim$AirspaceTest.ic" NAME="AirspaceTest Coverage Results" MODIFIED="1722267666460" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
-    <SUITE FILE_PATH="coverage/ATCsim$TerminalTest.ic" NAME="TerminalTest Coverage Results" MODIFIED="1722714534058" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/ATCsim$TerminalTest.ic" NAME="TerminalTest Coverage Results" MODIFIED="1723502567627" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>
