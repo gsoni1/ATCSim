@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56c8de2e-7eff-4de6-ad45-7e612527ec89" name="Changes" comment="Terminal Class and Test Class completed">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atc/atcsim/AtcController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atc/atcsim/AtcLogger.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atc/atcsim/FlightSchedule.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/atc/atcsim/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atc/atcsim/GUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atc/atcsim/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atc/atcsim/Plane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atc/atcsim/Plane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +120,10 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Program Files (x86)/Oracle/JavaFX Scene Builder 2.0/JavaFX Scene Builder 2.0.exe",
+    "last_opened_file_path": "C:/Users/gauta/Downloads/flatlaf-3.5.1.jar",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.47586206",
     "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
 }]]></component>
@@ -149,7 +147,7 @@
       <command value="gradle test" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.ATCSim [test]">
+  <component name="RunManager">
     <configuration name="ATCSim [buil]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />

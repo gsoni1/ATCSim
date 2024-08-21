@@ -1,12 +1,21 @@
 package atc.atcsim;
 
+//import com.formdev.flatlaf.FlatLightLaf;
+
+//import com.formdev.flatlaf.FlatLightLaf;
+
+//import com.formdev.flatlaf.FlatLightLaf;
+
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.*;
+//import java.util.logging.Logger;
 
 public class GUI implements ActionListener {
+
     private JFrame frame = new JFrame();
     private JLabel label = new JLabel("Plane selected: None           ");
     private JList<Plane> list1 = new JList<>();
@@ -58,12 +67,16 @@ public class GUI implements ActionListener {
         JList<Plane> list = new JList<>(l1);
         listPanel.add(new JScrollPane(list), BorderLayout.CENTER); // Add the list with a scroll pane
         list1 = list;
+        listPanel.add(label, BorderLayout.SOUTH);
+        listPanel.add(button, BorderLayout.EAST);
+        label.setFont(new Font("Arial", Font.ITALIC, 20));
+        listPanel.setBorder(BorderFactory.createEmptyBorder(10, 0, 50, 0));
 
         // Creating a panel for the button and label
         JPanel buttonPanel = new JPanel();
         buttonPanel.setLayout(new FlowLayout());
-        buttonPanel.add(button);
-        buttonPanel.add(label);
+//        buttonPanel.add(button);
+//        buttonPanel.add(label);
         JPanel buttonPanel2 = new JPanel();
         JPanel emergencyButtonPanel = new JPanel();
         buttonPanel2.setLayout(new FlowLayout());
@@ -96,13 +109,22 @@ public class GUI implements ActionListener {
 
     // create one Frame
     public static void main(String[] args) {
+//        FlatLightLaf.setup();
         new GUI();
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == button) {
-            label.setText("Plane selected: Call Sign: " + list1.getSelectedValue().getPlaneCallSign() + ", Manufacturer: " + list1.getSelectedValue().getPlaneManufacturer());
+            label.setText("Plane selected: " + list1.getSelectedValue().getPlaneCallSign() + ", " +
+                    list1.getSelectedValue().getPlaneManufacturer()+ ", " +
+                    list1.getSelectedValue().getPlaneModel() + ", " +
+                    list1.getSelectedValue().getPlaneRegistration() + ", " +
+                    list1.getSelectedValue().getPlaneAirline() + ", " +
+                    list1.getSelectedValue().getPlaneOrigin() + ", " +
+                    list1.getSelectedValue().getPlaneDestination() + ", " +
+                    list1.getSelectedValue().getPlaneArrivalTime() + ", " +
+                    list1.getSelectedValue().getPlaneDepartureTime());
         }
         // add to takeoff queue button 2
         else if (checkBox1.isSelected() && e.getSource() == button2) {
@@ -148,6 +170,19 @@ public class GUI implements ActionListener {
             }
             else {
                 label.setText(list1.getSelectedValue().getPlaneCallSign() + " is not in the Landing Queue");
+            }
+        }
+        // clear for takeoff button
+        else if (checkBox1.isSelected() && e.getSource() == clearforTakeoffButton) {
+            if (L24.clearForTakeoff(list1.getSelectedValue())) {
+                takeoffQueuelist.remove(list1.getSelectedValue().getPlaneCallSign());
+                takeoffQueueLabel.setText("Takeoff Queue: ");
+                for (String s : takeoffQueuelist) {
+                    takeoffQueueLabel.setText(takeoffQueueLabel.getText() + s);
+                }
+            }
+            else {
+                label.setText(list1.getSelectedValue().getPlaneCallSign() + " is not in the Takeoff Queue");
             }
         }
     }
