@@ -24,6 +24,7 @@ public class Plane {
     private int planeFlightTime; // 14 hrs
     private String planeStatus; // at gate/taxxing/taking off/mid air/landing/arrived at gate
     private String planeFlightStatus; // delayed,on time,
+    private String planeSpaceLocation; //groundspace or airspace
 
     /**
      * Create a new Plane object.
@@ -42,9 +43,14 @@ public class Plane {
      * @param planeNumberOfPassengers assigned (Eg. 200)
      * @param planeFlightTime assigned (Eg. 14)
      * @param planeStatus assigned (Eg. taking off)
+     * @param planeSpaceLocation assigned (Eg. airspace)
      *
      */
-    public Plane(String planeManufacturer, String planeCallSign, String planeFlightStatus, String planeFlightNumber, String planeIATATypeCode, String planeRegistration, String planeAirline, String planeOrigin, String planeDestination, Double planeArrivalTime, Double planeDepartureTime, int planeNumberOfPassengers, int planeFlightTime, String planeStatus, String planeModel) {
+    public Plane(String planeManufacturer, String planeCallSign, String planeFlightStatus, String planeFlightNumber,
+                 String planeIATATypeCode, String planeRegistration, String planeAirline, String planeOrigin,
+                 String planeDestination, Double planeArrivalTime, Double planeDepartureTime,
+                 int planeNumberOfPassengers, int planeFlightTime, String planeStatus, String planeModel,
+                 String planeSpaceLocation) {
         this.planeManufacturer = planeManufacturer;
         this.planeCallSign = planeCallSign;
         this.planeFlightStatus = planeFlightStatus;
@@ -60,6 +66,7 @@ public class Plane {
         this.planeFlightTime = planeFlightTime;
         this.planeStatus = planeStatus;
         this.planeModel = planeModel;
+        this.planeSpaceLocation = planeSpaceLocation;
     }
 
     /**
@@ -196,6 +203,15 @@ public class Plane {
     }
 
     /**
+     * Getter method for variable planeSpaceLocation
+     * @return information about whether flight is in the airspace or groundspace
+     */
+    public String getPlaneSpaceLocation()
+    {
+        return planeSpaceLocation;
+    }
+
+    /**
      * Setter method for variable planeModel
      * @param p is the string name to be set for the planeModel
      */
@@ -327,5 +343,13 @@ public class Plane {
     public void setPlaneFlightStatus(String p)
     {
         planeFlightStatus = p;
+    }
+
+    /**
+     * Setter method for variable planeSpaceLocation
+     * @param p is the string description for the planeSpaceLocation
+     */
+    public void setPlaneSpaceLocation(String p) {
+        planeSpaceLocation = p;
     }
 }

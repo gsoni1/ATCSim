@@ -18,7 +18,7 @@ public class AirlineManagerTest {
     SQ11 = new Plane("Boeing", "SIA11", "Mid air","SQ11",
             "B77W","9V-SWB", "SingaporeAirlines",
             "FRA", "DXB", 1.15, 7.00,
-            200, 14,"taking off", "B777");
+            200, 14,"taking off", "B777", "airspace");
     }
 
     @Test

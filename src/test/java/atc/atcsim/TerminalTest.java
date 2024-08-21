@@ -29,12 +29,12 @@ public class TerminalTest {
                 "AI101", "B77W", "A6- EQB",
                 "Qantas", "FRA", "DXB", 7.00,
                 14.00, 200, 14, "taking off",
-                "delayed");
+                "delayed", "airspace");
         AI102 = new Plane("Boeing", "AIC102", "Mid air",
                 "AI102", "B77W", "A6- EQB",
                 "Qantas", "FRA", "DXB", 7.00,
                 14.00, 200, 14, "taking off",
-                "delayed");
+                "delayed", "airspace");
         four = new Terminal();
     }
 

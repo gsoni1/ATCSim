@@ -35,11 +35,11 @@ public class GUI implements ActionListener {
     private Plane AI101 = new Plane("Airbus", "AI101", "Mid air", "EK61",
                               "B77W", "A6- EQB", "Qantas",
                               "FRA", "DXB", 7.00, 14.00,
-                              200, 14, "taking off", "B777");
+                              200, 14, "taking off", "B777", "In Groundspace");
     private Plane AI102 = new Plane("Boeing", "AI102", "Mid air", "EK61",
             "B77W", "A6- EQB", "Qantas",
             "FRA", "DXB", 7.00, 14.00,
-            200, 14, "taking off", "B777");
+            200, 14, "taking off", "B777", "In Airspace");
     private Airspace londonHeathrowAir;
     private GroundSpace londonHeathrowGround;
     private Runway L24 = new Runway("twenty four left", londonHeathrowAir, londonHeathrowGround);
@@ -83,6 +83,7 @@ public class GUI implements ActionListener {
         emergencyButtonPanel.setLayout(new FlowLayout());
         buttonPanel2.add(clearforTakeoffButton);
         buttonPanel2.add(button2);
+        //        button2.setFont(new Font("Arial", Font.BOLD, 16));
 //        buttonPanel2.add(button3);
         emergencyButtonPanel.add(button3);
         buttonPanel2.add(takeoffQueueLabel);
@@ -117,14 +118,21 @@ public class GUI implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == button) {
             label.setText("Plane selected: " + list1.getSelectedValue().getPlaneCallSign() + ", " +
+                    list1.getSelectedValue().getPlaneFlightNumber() + ", " +
+                    list1.getSelectedValue().getPlaneSpaceLocation() + ", " +
                     list1.getSelectedValue().getPlaneManufacturer()+ ", " +
                     list1.getSelectedValue().getPlaneModel() + ", " +
+                    list1.getSelectedValue().getPlaneIATATypeCode() + ", " +
                     list1.getSelectedValue().getPlaneRegistration() + ", " +
-                    list1.getSelectedValue().getPlaneAirline() + ", " +
-                    list1.getSelectedValue().getPlaneOrigin() + ", " +
-                    list1.getSelectedValue().getPlaneDestination() + ", " +
-                    list1.getSelectedValue().getPlaneArrivalTime() + ", " +
-                    list1.getSelectedValue().getPlaneDepartureTime());
+                    list1.getSelectedValue().getPlaneAirline() + ", Origin: " +
+                    list1.getSelectedValue().getPlaneOrigin() + ", Destination: " +
+                    list1.getSelectedValue().getPlaneDestination() + ", Departure Time: " +
+                    list1.getSelectedValue().getPlaneDepartureTime() + " (EST), Arrival Time: " +
+                    list1.getSelectedValue().getPlaneArrivalTime() + " (EST), " +
+                    list1.getSelectedValue().getPlaneFlightStatus() + ", " +
+                    list1.getSelectedValue().getPlaneStatus() + ", Flight Time: " +
+                    list1.getSelectedValue().getPlaneFlightTime() + " (Hrs), "
+            );
         }
         // add to takeoff queue button 2
         else if (checkBox1.isSelected() && e.getSource() == button2) {

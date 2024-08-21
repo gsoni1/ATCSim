@@ -21,7 +21,7 @@ public class GroundSpaceTest {
         AI101 = new Plane("groundbus", "AI101", "Mid ground","EK61",
                 "B77W","A6- EQB", "Qantas",
                 "FRA", "DXB", 7.00, 14.00,
-                200, 14,"taking off", "delayed");
+                200, 14,"taking off", "delayed", "airspace");
     }
 
     /**

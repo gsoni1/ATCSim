@@ -25,12 +25,12 @@ public class RunwayTest {
                 "AI101", "B77W","A6- EQB",
                 "Qantas", "FRA", "DXB", 7.00,
                 14.00, 200, 14,"taking off",
-                "747");
+                "747", "airspace");
         AI102 = new Plane("Boeing", "AIC102", "Mid air",
                 "AI102", "B77W","A6- EQB",
                 "Qantas", "FRA", "DXB", 7.00,
                 14.00, 200, 14,"taking off",
-                "757");
+                "757", "airspace");
     }
 
     /**

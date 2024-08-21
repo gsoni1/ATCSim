@@ -22,7 +22,7 @@ public class PlaneTest {
         AI101 = new Plane("Airbus", "AI101", "Mid air", "EK61",
                 "B77W", "A6- EQB", "Qantas",
                 "FRA", "DXB", 7.00, 14.00,
-                200, 14, "taking off", "B777");
+                200, 14, "taking off", "B777", "airspace");
     }
 
     /**
@@ -146,6 +146,14 @@ public class PlaneTest {
     }
 
     /**
+     * Test the getPlaneSpaceLocation() getter method
+     */
+    @Test
+    public void testGetPlaneSpaceLocation() {
+        assertEquals(AI101.getPlaneSpaceLocation(), "airspace");
+    }
+
+    /**
      * Test the setPlaneModel() setter method
      */
     @Test
@@ -260,6 +268,15 @@ public class PlaneTest {
     public void testSetPlaneFlightStatus() {
         AI101.setPlaneFlightStatus("Landing");
         assertEquals(AI101.getPlaneFlightStatus(), "Landing");
+    }
+
+    /**
+     * Test the setPlaneSpaceLocation() setter method
+     */
+    @Test
+    public void testSetPlaneSpaceLocation() {
+        AI101.setPlaneSpaceLocation("groundspace");
+        assertEquals(AI101.getPlaneSpaceLocation(), "groundspace");
     }
 
 
