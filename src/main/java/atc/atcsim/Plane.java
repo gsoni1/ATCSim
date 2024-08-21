@@ -9,8 +9,8 @@ package atc.atcsim;
  * @version 7/10/2024
  */
 public class Plane {
-    private String planeManufacturer;
-    private String planeModel;
+    private String planeManufacturer; // Boeing
+    private String planeModel; // B777
     private String planeCallSign; // UAE61
     private String planeFlightNumber; // EK61
     private String planeIATATypeCode; // B77W
