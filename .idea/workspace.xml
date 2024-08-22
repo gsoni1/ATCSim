@@ -7,8 +7,6 @@
     <list default="true" id="56c8de2e-7eff-4de6-ad45-7e612527ec89" name="Changes" comment="Terminal Class and Test Class completed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/atc/atcsim/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atc/atcsim/GUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atc/atcsim/Runway.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atc/atcsim/Runway.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atc/atcsim/Terminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atc/atcsim/Terminal.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +147,7 @@
       <command value="gradle test" />
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Gradle.ATCSim [buil]">
     <configuration name="ATCSim [buil]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />

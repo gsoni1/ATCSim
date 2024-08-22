@@ -57,11 +57,15 @@ public class GUI implements ActionListener {
     private JTextField addGateNameField = new JTextField("Enter a New Gate Name");
     private JTextField removeGateNameField = new JTextField("Remove a Gate by Name");
     private JLabel searchByGateResultLabel = new JLabel("");
-    private JLabel AirlineManagerLabel = new JLabel("Airline Management Actions: ");
+//    private JLabel AirlineManagerLabel = new JLabel("Airline Management Actions: ");
     private JButton addPlaneToFleetButton = new JButton("Add Selected Plane to Fleet");
-//    private JButton addPlaneToFleetButton = new JButton("Add Selected Plane to Fleet");
-
-
+    private JButton removePlaneFromFleetButton = new JButton("Remove Selected Plane From Fleet");
+    private JLabel numOfAllPlanesLabel = new JLabel("Total Planes in Singapore Airlines' Fleet: 0, ");
+    private JLabel numOfBoeingPlanesLabel = new JLabel("Boeing: 0, ");
+    private JLabel numOfAirbusPlanesLabel = new JLabel("Airbus: 0");
+    private JTextField modelSearchField = new JTextField("Enter a Plane Model to Search");
+    private JButton searchModelButton = new JButton("Search Model in Fleet");
+    private JLabel numOfModel = new JLabel("Number of _ in Fleet: ");
     // sample objects
     private Plane AI101 = new Plane("Airbus", "AI101", "On Time", "EK61",
                               "B77W", "A6- EQB", "Qantas",
@@ -76,6 +80,7 @@ public class GUI implements ActionListener {
     private GroundSpace londonHeathrowGround = new GroundSpace();
     private Runway L24 = new Runway("twenty four left", londonHeathrowAir, londonHeathrowGround);
     private Terminal T4 = new Terminal();
+    private AirlineManager singaporeAirlines = new AirlineManager();
 
 
 
@@ -96,10 +101,14 @@ public class GUI implements ActionListener {
         closeGroundspaceButton.addActionListener(this);
         clearAirspaceButton.addActionListener(this);
         clearGroundspaceButton.addActionListener(this);
-        tf1.addActionListener(this);
+//        tf1.addActionListener(this);
         addGateButton.addActionListener(this);
         removeGateButton.addActionListener(this);
         searchGateButton.addActionListener(this);
+        addPlaneToFleetButton.addActionListener(this);
+        removePlaneFromFleetButton.addActionListener(this);
+        searchModelButton.addActionListener(this);
+
 
 
 
@@ -143,7 +152,14 @@ public class GUI implements ActionListener {
         JPanel airlinemanagerButtonPanel = new JPanel();
         airlinemanagerButtonPanel.add(airlineManagerLabel);
         airlineManagerLabel.setFont(new Font("Arial", Font.ITALIC, 20));
+        airlinemanagerButtonPanel.add(numOfAllPlanesLabel);
+        airlinemanagerButtonPanel.add(numOfBoeingPlanesLabel);
+        airlinemanagerButtonPanel.add(numOfAirbusPlanesLabel);
         airlinemanagerButtonPanel.add(addPlaneToFleetButton);
+        airlinemanagerButtonPanel.add(removePlaneFromFleetButton);
+        airlinemanagerButtonPanel.add(modelSearchField);
+        airlinemanagerButtonPanel.add(searchModelButton);
+        airlinemanagerButtonPanel.add(numOfModel);
 //        runwayButtonPanel.setLayout(new FlowLayout());
 //        emergencyButtonPanel.setLayout(new FlowLayout());
         runwayButtonPanel.setLayout(new GridLayout(20, 2, 10, 10)); // Equal space for buttons in a 4x2 grid
@@ -359,7 +375,7 @@ public class GUI implements ActionListener {
             londonHeathrowAir.clearAirspace();
             label.setText("London Heathrow Airspace is Now Empty");
         }
-        // terminal text field
+        // search gate button
         else if (e.getSource() == searchGateButton) {
             Plane ans = T4.getPlane(tf1.getText());
             searchByGateResultLabel.setText(ans.getPlaneCallSign() + " is at Gate " + tf1.getText());
@@ -372,13 +388,36 @@ public class GUI implements ActionListener {
                 label.setText(p.getPlaneCallSign() + " added to Gate " + gateName);
             }
         }
-        // add gate field and button
+        // remove gate field and button
         else if (e.getSource() == removeGateButton) {
             String gateName = removeGateNameField.getText();
             Plane p = T4.getPlane(gateName);
             if (T4.removeGate(gateName)) {
                 label.setText(p.getPlaneCallSign() + " removed from Gate " + gateName);
             }
+        }
+        // add plane to fleet button
+        else if (e.getSource() == addPlaneToFleetButton) {
+            if (singaporeAirlines.addPlaneToFleet(list1.getSelectedValue())) {
+                label.setText(list1.getSelectedValue().getPlaneCallSign() + " added to Fleet ");
+                numOfAirbusPlanesLabel.setText("Airbus: " + singaporeAirlines.getNumOfPlaneManufacturer("Airbus"));
+                numOfBoeingPlanesLabel.setText("Boeing: " + singaporeAirlines.getNumOfPlaneManufacturer("Boeing") + ", ");
+                numOfAllPlanesLabel.setText("Total Planes in Singapore Airlines' Fleet: " + singaporeAirlines.getNumOfAllPlanes() + ", ");
+            }
+        }
+        // remove plane from fleet button
+        else if (e.getSource() == removePlaneFromFleetButton) {
+            if (singaporeAirlines.removePlaneFromFleet(list1.getSelectedValue())) {
+                label.setText(list1.getSelectedValue().getPlaneCallSign() + " removed from Fleet ");
+                numOfAirbusPlanesLabel.setText("Airbus: " + singaporeAirlines.getNumOfPlaneManufacturer("Airbus"));
+                numOfBoeingPlanesLabel.setText("Boeing: " + singaporeAirlines.getNumOfPlaneManufacturer("Boeing") + ", ");
+                numOfAllPlanesLabel.setText("Total Planes in Singapore Airlines' Fleet: " + singaporeAirlines.getNumOfAllPlanes() + ", ");
+            }
+        }
+        // search gate button
+        else if (e.getSource() == searchModelButton) {
+            String model = modelSearchField.getText();
+            numOfModel.setText("Number of " + model + " in Fleet :" + singaporeAirlines.getNumOfPlaneModel(model));
         }
     }
 }
