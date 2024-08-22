@@ -7,13 +7,8 @@
     <list default="true" id="56c8de2e-7eff-4de6-ad45-7e612527ec89" name="Changes" comment="Terminal Class and Test Class completed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/atc/atcsim/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atc/atcsim/GUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atc/atcsim/Plane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atc/atcsim/Plane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/atc/atcsim/AirlineManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/atc/atcsim/AirlineManagerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/atc/atcsim/AirspaceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/atc/atcsim/AirspaceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/atc/atcsim/GroundSpaceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/atc/atcsim/GroundSpaceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/atc/atcsim/PlaneTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/atc/atcsim/PlaneTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/atc/atcsim/RunwayTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/atc/atcsim/RunwayTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/atc/atcsim/TerminalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/atc/atcsim/TerminalTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atc/atcsim/Runway.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atc/atcsim/Runway.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atc/atcsim/Terminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atc/atcsim/Terminal.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,53 +81,54 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.ATCSim [:GUI.main()].executor": "Run",
-    "Gradle.ATCSim [:HelloApplication.main()].executor": "Run",
-    "Gradle.ATCSim [buil].executor": "Run",
-    "Gradle.ATCSim [build].executor": "Run",
-    "Gradle.ATCSim [test].executor": "Run",
-    "Gradle.ATCSim.executor": "Run",
-    "Gradle.ATCsim [:GUI.main()].executor": "Run",
-    "Gradle.ATCsim [:HelloApplication.main()].executor": "Run",
-    "Gradle.ATCsim [build].executor": "Run",
-    "Gradle.ATCsim [clean].executor": "Run",
-    "Gradle.ATCsim [publish].executor": "Run",
-    "Gradle.ATCsim [test].executor": "Run",
-    "Gradle.AirlineManagerTest.executor": "Run",
-    "Gradle.AirspaceTest.executor": "Run",
-    "Gradle.AirspaceTest.testAddToAirspace2.executor": "Run",
-    "Gradle.AirspaceTest.testGetPlaneInAirspace.executor": "Run",
-    "Gradle.AirspaceTest.testGetPlaneInAirspace2.executor": "Run",
-    "Gradle.AirspaceTest.testRemoveFromAirspace2.executor": "Run",
-    "Gradle.GroundSpaceTest.executor": "Run",
-    "Gradle.PlaneTest.executor": "Run",
-    "Gradle.RunwayTest.executor": "Coverage",
-    "Gradle.RunwayTest.testAddToTakeoffQueue.executor": "Run",
-    "Gradle.RunwayTest.testClearForTakeoff.executor": "Run",
-    "Gradle.TerminalTest.executor": "Coverage",
-    "Gradle.TerminalTest.testAddGate.executor": "Run",
-    "Gradle.TerminalTest.testAddGateAlreadyExists.executor": "Run",
-    "Gradle.TerminalTest.testContainsGateDoesNotExist.executor": "Run",
-    "Gradle.TerminalTest.testContainsPlane.executor": "Run",
-    "Gradle.TerminalTest.testGatePlaneAlreadyExists.executor": "Run",
-    "Gradle.TerminalTest.testGetPlane.executor": "Run",
-    "Gradle.TerminalTest.testRemoveGate.executor": "Run",
-    "Gradle.TerminalTest.testRemoveGateDoesNotExist.executor": "Run",
-    "Gradle.Upgrade Gradle wrapper.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/gauta/Downloads/flatlaf-3.5.1.jar",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.47586206",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.ATCSim [:GUI.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ATCSim [:HelloApplication.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ATCSim [GUI.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ATCSim [buil].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ATCSim [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ATCSim [test].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ATCSim.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ATCsim [:GUI.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ATCsim [:HelloApplication.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ATCsim [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ATCsim [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ATCsim [publish].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ATCsim [test].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AirlineManagerTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AirspaceTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AirspaceTest.testAddToAirspace2.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AirspaceTest.testGetPlaneInAirspace.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AirspaceTest.testGetPlaneInAirspace2.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AirspaceTest.testRemoveFromAirspace2.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.GroundSpaceTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PlaneTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RunwayTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;Gradle.RunwayTest.testAddToTakeoffQueue.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RunwayTest.testClearForTakeoff.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TerminalTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;Gradle.TerminalTest.testAddGate.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TerminalTest.testAddGateAlreadyExists.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TerminalTest.testContainsGateDoesNotExist.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TerminalTest.testContainsPlane.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TerminalTest.testGatePlaneAlreadyExists.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TerminalTest.testGetPlane.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TerminalTest.testRemoveGate.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TerminalTest.testRemoveGateDoesNotExist.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Upgrade Gradle wrapper.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/gauta/Downloads/flatlaf-3.5.1.jar&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.47586206&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />

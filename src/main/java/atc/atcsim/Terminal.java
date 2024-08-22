@@ -67,7 +67,6 @@ public class Terminal {
         return gates.containsKey(gateName);
     }
 
-    //TODO: write a method that checks if a plane object already exists in the hashmap, if it does, we cannot add that gate
 
     /**
      * Method to check whether the same value has been repeated in the Hashmap

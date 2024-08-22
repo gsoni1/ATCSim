@@ -106,9 +106,10 @@ public class Runway {
             runwayIsClear = false; // mark runway as occupied until the plane leaves the runway
             takeoffQueue.remove();
             groundSpace.removeFromGroundSpace(p);
-            p.setPlaneStatus("taking off");
+            p.setPlaneStatus("Takeoff");
             airspace.addToAirspace(p);
-            p.setPlaneStatus("cruising");
+            p.setPlaneStatus("Cruising");
+            p.setPlaneSpaceLocation("In Airspace");
             runwayIsClear = true; // mark runway as clear once the plane leaves the runway
             return true;
         }
@@ -186,12 +187,13 @@ public class Runway {
     public boolean clearForLanding(Plane p) {
         if (runwayIsClear) {
             runwayIsClear = false; // mark runway as occupied
-            p.setPlaneStatus("landing");
+            p.setPlaneStatus("Landing");
             landingQueue.remove();
             airspace.removeFromAirspace(p);
             groundSpace.addToGroundSpace(p);
             runwayIsClear = true; // mark runway as clear once the plane lands
-            p.setPlaneStatus("taxiing to gate");
+            p.setPlaneStatus("Arriving at Gate");
+            p.setPlaneSpaceLocation("In Groundspace");
             return true;
         }
         return false;
