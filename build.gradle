@@ -74,3 +74,11 @@ publishing {
     }
   }
 }
+
+jar {
+  manifest {
+    attributes(
+            'Main-Class': 'atc.atcsim.GUI'
+    )
+  }
+}

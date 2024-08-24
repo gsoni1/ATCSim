@@ -66,7 +66,7 @@ public class GUI implements ActionListener {
     private JTextField modelSearchField = new JTextField("Enter a Plane Model to Search");
     private JButton searchModelButton = new JButton("Search Model in Fleet");
     private JLabel numOfModel = new JLabel("");
-    
+
     // sample objects
     private Plane AI101 = new Plane("Airbus", "AI101", "On Time", "EK61",
                               "B77W", "A6- EQB", "Qantas",
