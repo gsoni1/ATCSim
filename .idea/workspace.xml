@@ -10,9 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56c8de2e-7eff-4de6-ad45-7e612527ec89" name="Changes" comment="Terminal Class and Test Class completed">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atc/atcsim/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atc/atcsim/GUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +22,9 @@
     <option name="myAddOrReplace" value="0" />
   </component>
   <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
@@ -93,6 +95,7 @@
     "Gradle.ATCSim.executor": "Run",
     "Gradle.ATCsim [:GUI.main()].executor": "Run",
     "Gradle.ATCsim [:HelloApplication.main()].executor": "Run",
+    "Gradle.ATCsim [GUI.main()].executor": "Run",
     "Gradle.ATCsim [build].executor": "Run",
     "Gradle.ATCsim [clean].executor": "Run",
     "Gradle.ATCsim [publish].executor": "Run",
@@ -153,7 +156,7 @@
       <command value="gradle test" />
     </option>
   </component>
-  <component name="RunManager" selected="JAR Application.ATCsim.jar (1)">
+  <component name="RunManager">
     <configuration name="ATCSim [buil]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
