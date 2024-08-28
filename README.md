@@ -25,9 +25,12 @@ Lastly, there are also airline managment actions such as
 ## Project Management
 <span> <a href="https://gsoni1.notion.site/ATCSim-Project-Management-f583c2e6160f4ea18f14e5de4d055a16?pvs=74">See the Notion page for ATCSim</a></small> </span><br><br>
 
+## Technical Documentation
+<span> <a href="https://docs.google.com/document/d/1SdZ_sOkscnOaXEIxS-s79ScJuQiSsHePRyrERVoIX1A/edit?usp=sharing"> See the Google Doc</a></small> </span><br><br>
+
+
 ## Installation
 Requirements:
-
 
 - Java 8
 https://www.java.com/download/ie_manual.jsp
