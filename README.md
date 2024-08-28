@@ -22,6 +22,9 @@ Lastly, there are also airline managment actions such as
 - Managing your fleet of aircraft (Boeing and Airbus)
 - Seeing the stats of your fleet such as how many Boeing 777s are in your fleet
 
+## Project Management
+<span> <a href="https://gsoni1.notion.site/ATCSim-Project-Management-f583c2e6160f4ea18f14e5de4d055a16?pvs=74">See the Notion page for ATCSim</a></small> </span><br><br>
+
 ## Installation
 Requirements:
 
