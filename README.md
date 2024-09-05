@@ -45,3 +45,5 @@ Download the JAR File, run it, and enjoy!
 
 ## Sources
 https://www.flightradar24.com/
+
+https://www.altexsoft.com/blog/technical-documentation-in-software-development-types-best-practices-and-tools/
