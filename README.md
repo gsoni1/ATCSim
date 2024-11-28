@@ -5,6 +5,7 @@
 	<br>
 	<span>Air Traffic Control Simulator</span><br><br>
 	<span>By <a href="https://www.linkedin.com/in/gsoni16/">Gautam Soni</a></small> </span><br><br>
+	<span>and <a href="https://www.linkedin.com/in/arihitad/">Arihita Dirghangi</a></small> </span><br><br>
 </p>
 
 ## About
